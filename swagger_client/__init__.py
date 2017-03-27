@@ -46,6 +46,7 @@ from .models.create_subaccount_params import CreateSubaccountParams
 from .models.create_trunk_params import CreateTrunkParams
 from .models.delete_contact import DeleteContact
 from .models.delete_group import DeleteGroup
+from .models.delete_media import DeleteMedia
 from .models.delete_menu import DeleteMenu
 from .models.delete_queue import DeleteQueue
 from .models.delete_route import DeleteRoute

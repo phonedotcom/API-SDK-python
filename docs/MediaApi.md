@@ -4,13 +4,73 @@ All URIs are relative to *https://api.phone.com/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_account_media**](MediaApi.md#create_account_media) | **POST** /accounts/{account_id}/media | Add a media object to your account that can be used as a greeting or hold music. Users may create a media by using the built-in Text-to-speech (TTS) facility or upload a file of their choice. (Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB)
-[**get_account_media**](MediaApi.md#get_account_media) | **GET** /accounts/{account_id}/media/{recording_id} | Show details of an individual media recording (Greeting or Hold Music)
+[**create_account_media_files**](MediaApi.md#create_account_media_files) | **POST** /accounts/{account_id}/media/files | Add a media object to your account that can be used as a greeting or hold music. Users may create a media by using the built-in Text-to-speech (TTS) facility or upload a file of their choice. (Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB)
+[**create_account_media_tts**](MediaApi.md#create_account_media_tts) | **POST** /accounts/{account_id}/media/tts | Add a media object to your account that can be used as a greeting or hold music. Users may create a media by using the built-in Text-to-speech (TTS) facility or upload a file of their choice. (Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB)
+[**delete_account_media**](MediaApi.md#delete_account_media) | **DELETE** /accounts/{account_id}/media/{media_id} | Delete an individual media record
+[**get_account_media**](MediaApi.md#get_account_media) | **GET** /accounts/{account_id}/media/{media_id} | Show details of an individual media recording (Greeting or Hold Music)
 [**list_account_media**](MediaApi.md#list_account_media) | **GET** /accounts/{account_id}/media | Get a list of media recordings for an account
+[**replace_account_media_tts**](MediaApi.md#replace_account_media_tts) | **PUT** /accounts/{account_id}/media/{media_id} | Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
 
 
-# **create_account_media**
-> MediaFull create_account_media(account_id, data=data)
+# **create_account_media_files**
+> MediaFull create_account_media_files(account_id, json=json, file=file)
+
+Add a media object to your account that can be used as a greeting or hold music. Users may create a media by using the built-in Text-to-speech (TTS) facility or upload a file of their choice. (Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB)
+
+See Account Media for more info on the properties.
+
+### Example 
+```python
+from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: apiKey
+swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = swagger_client.MediaApi()
+account_id = 56 # int | Account ID
+json = 'json_example' # str | Media extra parameters (optional)
+file = '/path/to/file.txt' # file | Media file (optional)
+
+try: 
+    # Add a media object to your account that can be used as a greeting or hold music. Users may create a media by using the built-in Text-to-speech (TTS) facility or upload a file of their choice. (Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB)
+    api_response = api_instance.create_account_media_files(account_id, json=json, file=file)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling MediaApi->create_account_media_files: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **account_id** | **int**| Account ID | 
+ **json** | **str**| Media extra parameters | [optional] 
+ **file** | **file**| Media file | [optional] 
+
+### Return type
+
+[**MediaFull**](MediaFull.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_account_media_tts**
+> MediaFull create_account_media_tts(account_id, data=data)
 
 Add a media object to your account that can be used as a greeting or hold music. Users may create a media by using the built-in Text-to-speech (TTS) facility or upload a file of their choice. (Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB)
 
@@ -36,10 +96,10 @@ data = swagger_client.CreateMediaParams() # CreateMediaParams | Media data (opti
 
 try: 
     # Add a media object to your account that can be used as a greeting or hold music. Users may create a media by using the built-in Text-to-speech (TTS) facility or upload a file of their choice. (Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB)
-    api_response = api_instance.create_account_media(account_id, data=data)
+    api_response = api_instance.create_account_media_tts(account_id, data=data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling MediaApi->create_account_media: %s\n" % e)
+    print("Exception when calling MediaApi->create_account_media_tts: %s\n" % e)
 ```
 
 ### Parameters
@@ -64,8 +124,63 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **delete_account_media**
+> DeleteMedia delete_account_media(account_id, media_id)
+
+Delete an individual media record
+
+See Account Media for more info on the properties.
+
+### Example 
+```python
+from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: apiKey
+swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = swagger_client.MediaApi()
+account_id = 56 # int | Account ID
+media_id = 56 # int | Media ID
+
+try: 
+    # Delete an individual media record
+    api_response = api_instance.delete_account_media(account_id, media_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling MediaApi->delete_account_media: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **account_id** | **int**| Account ID | 
+ **media_id** | **int**| Media ID | 
+
+### Return type
+
+[**DeleteMedia**](DeleteMedia.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_account_media**
-> MediaFull get_account_media(account_id, recording_id)
+> MediaFull get_account_media(account_id, media_id)
 
 Show details of an individual media recording (Greeting or Hold Music)
 
@@ -87,11 +202,11 @@ swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = swagger_client.MediaApi()
 account_id = 56 # int | Account ID
-recording_id = 56 # int | Recording ID
+media_id = 56 # int | Media ID
 
 try: 
     # Show details of an individual media recording (Greeting or Hold Music)
-    api_response = api_instance.get_account_media(account_id, recording_id)
+    api_response = api_instance.get_account_media(account_id, media_id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling MediaApi->get_account_media: %s\n" % e)
@@ -102,7 +217,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **int**| Account ID | 
- **recording_id** | **int**| Recording ID | 
+ **media_id** | **int**| Media ID | 
 
 ### Return type
 
@@ -174,6 +289,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ListMedia**](ListMedia.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **replace_account_media_tts**
+> MediaFull replace_account_media_tts(account_id, media_id, data=data)
+
+Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+
+See Account Media for more info on the properties.
+
+### Example 
+```python
+from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: apiKey
+swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = swagger_client.MediaApi()
+account_id = 56 # int | Account ID
+media_id = 56 # int | Media ID
+data = swagger_client.CreateMediaParams() # CreateMediaParams | Media data (optional)
+
+try: 
+    # Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+    api_response = api_instance.replace_account_media_tts(account_id, media_id, data=data)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling MediaApi->replace_account_media_tts: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **account_id** | **int**| Account ID | 
+ **media_id** | **int**| Media ID | 
+ **data** | [**CreateMediaParams**](CreateMediaParams.md)| Media data | [optional] 
+
+### Return type
+
+[**MediaFull**](MediaFull.md)
 
 ### Authorization
 

@@ -154,7 +154,7 @@ class MenusApi(object):
     def delete_account_menu(self, account_id, menu_id, **kwargs):
         """
         Delete an individual menu
-        This service shows the details of an individual menu.
+        See Account Menus for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -181,7 +181,7 @@ class MenusApi(object):
     def delete_account_menu_with_http_info(self, account_id, menu_id, **kwargs):
         """
         Delete an individual menu
-        This service shows the details of an individual menu.
+        See Account Menus for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -523,7 +523,7 @@ class MenusApi(object):
     def replace_account_menu(self, account_id, menu_id, **kwargs):
         """
         Replace an individual menu
-        This service replaces the details of an individual Menu.
+        See Account Menus for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -551,7 +551,7 @@ class MenusApi(object):
     def replace_account_menu_with_http_info(self, account_id, menu_id, **kwargs):
         """
         Replace an individual menu
-        This service replaces the details of an individual Menu.
+        See Account Menus for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

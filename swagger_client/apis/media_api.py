@@ -40,7 +40,7 @@ class MediaApi(object):
                 config.api_client = ApiClient()
             self.api_client = config.api_client
 
-    def create_account_media(self, account_id, **kwargs):
+    def create_account_media_files(self, account_id, **kwargs):
         """
         Add a media object to your account that can be used as a greeting or hold music. Users may create a media by using the built-in Text-to-speech (TTS) facility or upload a file of their choice. (Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB)
         See Account Media for more info on the properties.
@@ -50,7 +50,122 @@ class MediaApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_account_media(account_id, callback=callback_function)
+        >>> thread = api.create_account_media_files(account_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param int account_id: Account ID (required)
+        :param str json: Media extra parameters
+        :param file file: Media file
+        :return: MediaFull
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.create_account_media_files_with_http_info(account_id, **kwargs)
+        else:
+            (data) = self.create_account_media_files_with_http_info(account_id, **kwargs)
+            return data
+
+    def create_account_media_files_with_http_info(self, account_id, **kwargs):
+        """
+        Add a media object to your account that can be used as a greeting or hold music. Users may create a media by using the built-in Text-to-speech (TTS) facility or upload a file of their choice. (Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB)
+        See Account Media for more info on the properties.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_account_media_files_with_http_info(account_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param int account_id: Account ID (required)
+        :param str json: Media extra parameters
+        :param file file: Media file
+        :return: MediaFull
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'json', 'file']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_account_media_files" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `create_account_media_files`")
+
+
+        collection_formats = {}
+
+        resource_path = '/accounts/{account_id}/media/files'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['account_id'] = params['account_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+        if 'json' in params:
+            form_params.append(('json', params['json']))
+        if 'file' in params:
+            local_var_files['file'] = params['file']
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['multipart/form-data'])
+
+        # Authentication setting
+        auth_settings = ['apiKey']
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='MediaFull',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def create_account_media_tts(self, account_id, **kwargs):
+        """
+        Add a media object to your account that can be used as a greeting or hold music. Users may create a media by using the built-in Text-to-speech (TTS) facility or upload a file of their choice. (Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB)
+        See Account Media for more info on the properties.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_account_media_tts(account_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -62,12 +177,12 @@ class MediaApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_account_media_with_http_info(account_id, **kwargs)
+            return self.create_account_media_tts_with_http_info(account_id, **kwargs)
         else:
-            (data) = self.create_account_media_with_http_info(account_id, **kwargs)
+            (data) = self.create_account_media_tts_with_http_info(account_id, **kwargs)
             return data
 
-    def create_account_media_with_http_info(self, account_id, **kwargs):
+    def create_account_media_tts_with_http_info(self, account_id, **kwargs):
         """
         Add a media object to your account that can be used as a greeting or hold music. Users may create a media by using the built-in Text-to-speech (TTS) facility or upload a file of their choice. (Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB)
         See Account Media for more info on the properties.
@@ -77,7 +192,7 @@ class MediaApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_account_media_with_http_info(account_id, callback=callback_function)
+        >>> thread = api.create_account_media_tts_with_http_info(account_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -99,18 +214,18 @@ class MediaApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_account_media" % key
+                    " to method create_account_media_tts" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'account_id' is set
         if ('account_id' not in params) or (params['account_id'] is None):
-            raise ValueError("Missing the required parameter `account_id` when calling `create_account_media`")
+            raise ValueError("Missing the required parameter `account_id` when calling `create_account_media_tts`")
 
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/media'.replace('{format}', 'json')
+        resource_path = '/accounts/{account_id}/media/tts'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
@@ -151,7 +266,121 @@ class MediaApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def get_account_media(self, account_id, recording_id, **kwargs):
+    def delete_account_media(self, account_id, media_id, **kwargs):
+        """
+        Delete an individual media record
+        See Account Media for more info on the properties.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_account_media(account_id, media_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param int account_id: Account ID (required)
+        :param int media_id: Media ID (required)
+        :return: DeleteMedia
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_account_media_with_http_info(account_id, media_id, **kwargs)
+        else:
+            (data) = self.delete_account_media_with_http_info(account_id, media_id, **kwargs)
+            return data
+
+    def delete_account_media_with_http_info(self, account_id, media_id, **kwargs):
+        """
+        Delete an individual media record
+        See Account Media for more info on the properties.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_account_media_with_http_info(account_id, media_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param int account_id: Account ID (required)
+        :param int media_id: Media ID (required)
+        :return: DeleteMedia
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'media_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_account_media" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `delete_account_media`")
+        # verify the required parameter 'media_id' is set
+        if ('media_id' not in params) or (params['media_id'] is None):
+            raise ValueError("Missing the required parameter `media_id` when calling `delete_account_media`")
+
+
+        collection_formats = {}
+
+        resource_path = '/accounts/{account_id}/media/{media_id}'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['account_id'] = params['account_id']
+        if 'media_id' in params:
+            path_params['media_id'] = params['media_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = ['apiKey']
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='DeleteMedia',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def get_account_media(self, account_id, media_id, **kwargs):
         """
         Show details of an individual media recording (Greeting or Hold Music)
         Get individual media recording
@@ -161,24 +390,24 @@ class MediaApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_account_media(account_id, recording_id, callback=callback_function)
+        >>> thread = api.get_account_media(account_id, media_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param int account_id: Account ID (required)
-        :param int recording_id: Recording ID (required)
+        :param int media_id: Media ID (required)
         :return: MediaFull
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.get_account_media_with_http_info(account_id, recording_id, **kwargs)
+            return self.get_account_media_with_http_info(account_id, media_id, **kwargs)
         else:
-            (data) = self.get_account_media_with_http_info(account_id, recording_id, **kwargs)
+            (data) = self.get_account_media_with_http_info(account_id, media_id, **kwargs)
             return data
 
-    def get_account_media_with_http_info(self, account_id, recording_id, **kwargs):
+    def get_account_media_with_http_info(self, account_id, media_id, **kwargs):
         """
         Show details of an individual media recording (Greeting or Hold Music)
         Get individual media recording
@@ -188,18 +417,18 @@ class MediaApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_account_media_with_http_info(account_id, recording_id, callback=callback_function)
+        >>> thread = api.get_account_media_with_http_info(account_id, media_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param int account_id: Account ID (required)
-        :param int recording_id: Recording ID (required)
+        :param int media_id: Media ID (required)
         :return: MediaFull
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'recording_id']
+        all_params = ['account_id', 'media_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -217,19 +446,19 @@ class MediaApi(object):
         # verify the required parameter 'account_id' is set
         if ('account_id' not in params) or (params['account_id'] is None):
             raise ValueError("Missing the required parameter `account_id` when calling `get_account_media`")
-        # verify the required parameter 'recording_id' is set
-        if ('recording_id' not in params) or (params['recording_id'] is None):
-            raise ValueError("Missing the required parameter `recording_id` when calling `get_account_media`")
+        # verify the required parameter 'media_id' is set
+        if ('media_id' not in params) or (params['media_id'] is None):
+            raise ValueError("Missing the required parameter `media_id` when calling `get_account_media`")
 
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/media/{recording_id}'.replace('{format}', 'json')
+        resource_path = '/accounts/{account_id}/media/{media_id}'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
-        if 'recording_id' in params:
-            path_params['recording_id'] = params['recording_id']
+        if 'media_id' in params:
+            path_params['media_id'] = params['media_id']
 
         query_params = {}
 
@@ -399,6 +628,124 @@ class MediaApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='ListMedia',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def replace_account_media_tts(self, account_id, media_id, **kwargs):
+        """
+        Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+        See Account Media for more info on the properties.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.replace_account_media_tts(account_id, media_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param int account_id: Account ID (required)
+        :param int media_id: Media ID (required)
+        :param CreateMediaParams data: Media data
+        :return: MediaFull
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.replace_account_media_tts_with_http_info(account_id, media_id, **kwargs)
+        else:
+            (data) = self.replace_account_media_tts_with_http_info(account_id, media_id, **kwargs)
+            return data
+
+    def replace_account_media_tts_with_http_info(self, account_id, media_id, **kwargs):
+        """
+        Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+        See Account Media for more info on the properties.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.replace_account_media_tts_with_http_info(account_id, media_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param int account_id: Account ID (required)
+        :param int media_id: Media ID (required)
+        :param CreateMediaParams data: Media data
+        :return: MediaFull
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'media_id', 'data']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method replace_account_media_tts" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `replace_account_media_tts`")
+        # verify the required parameter 'media_id' is set
+        if ('media_id' not in params) or (params['media_id'] is None):
+            raise ValueError("Missing the required parameter `media_id` when calling `replace_account_media_tts`")
+
+
+        collection_formats = {}
+
+        resource_path = '/accounts/{account_id}/media/{media_id}'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['account_id'] = params['account_id']
+        if 'media_id' in params:
+            path_params['media_id'] = params['media_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = ['apiKey']
+
+        return self.api_client.call_api(resource_path, 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='MediaFull',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

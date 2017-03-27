@@ -36,7 +36,7 @@ class ListPhoneNumbers(object):
             'total': 'int',
             'offset': 'int',
             'limit': 'int',
-            'items': 'list[PhoneNumberContact]'
+            'items': 'list[PhoneNumberFull]'
         }
 
         self.attribute_map = {
@@ -167,7 +167,7 @@ class ListPhoneNumbers(object):
         Array of Contact Phone Number Objects. See below for details.
 
         :return: The items of this ListPhoneNumbers.
-        :rtype: list[PhoneNumberContact]
+        :rtype: list[PhoneNumberFull]
         """
         return self._items
 
@@ -178,7 +178,7 @@ class ListPhoneNumbers(object):
         Array of Contact Phone Number Objects. See below for details.
 
         :param items: The items of this ListPhoneNumbers.
-        :type: list[PhoneNumberContact]
+        :type: list[PhoneNumberFull]
         """
 
         self._items = items
