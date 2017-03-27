@@ -71,6 +71,14 @@ class TestMediaApi(unittest.TestCase):
         """
         pass
 
+    def test_replace_account_media_files(self):
+        """
+        Test case for replace_account_media_files
+
+        Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+        """
+        pass
+
     def test_replace_account_media_tts(self):
         """
         Test case for replace_account_media_tts

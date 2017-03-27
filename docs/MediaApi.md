@@ -9,7 +9,8 @@ Method | HTTP request | Description
 [**delete_account_media**](MediaApi.md#delete_account_media) | **DELETE** /accounts/{account_id}/media/{media_id} | Delete an individual media record
 [**get_account_media**](MediaApi.md#get_account_media) | **GET** /accounts/{account_id}/media/{media_id} | Show details of an individual media recording (Greeting or Hold Music)
 [**list_account_media**](MediaApi.md#list_account_media) | **GET** /accounts/{account_id}/media | Get a list of media recordings for an account
-[**replace_account_media_tts**](MediaApi.md#replace_account_media_tts) | **PUT** /accounts/{account_id}/media/{media_id} | Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+[**replace_account_media_files**](MediaApi.md#replace_account_media_files) | **PUT** /accounts/{account_id}/media/files/{media_id} | Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+[**replace_account_media_tts**](MediaApi.md#replace_account_media_tts) | **PUT** /accounts/{account_id}/media/tts/{media_id} | Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
 
 
 # **create_account_media_files**
@@ -289,6 +290,65 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ListMedia**](ListMedia.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **replace_account_media_files**
+> MediaFull replace_account_media_files(account_id, media_id, json=json, file=file)
+
+Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+
+See Account Media for more info on the properties.
+
+### Example 
+```python
+from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: apiKey
+swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = swagger_client.MediaApi()
+account_id = 56 # int | Account ID
+media_id = 56 # int | Media ID
+json = 'json_example' # str | Media extra parameters (optional)
+file = '/path/to/file.txt' # file | Media file (optional)
+
+try: 
+    # Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+    api_response = api_instance.replace_account_media_files(account_id, media_id, json=json, file=file)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling MediaApi->replace_account_media_files: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **account_id** | **int**| Account ID | 
+ **media_id** | **int**| Media ID | 
+ **json** | **str**| Media extra parameters | [optional] 
+ **file** | **file**| Media file | [optional] 
+
+### Return type
+
+[**MediaFull**](MediaFull.md)
 
 ### Authorization
 
