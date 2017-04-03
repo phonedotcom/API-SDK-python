@@ -120,6 +120,7 @@ from .models.schedule_full import ScheduleFull
 from .models.schedule_summary import ScheduleSummary
 from .models.sip_authentication import SipAuthentication
 from .models.sms_forwarding import SmsForwarding
+from .models.sms_forwarding_params import SmsForwardingParams
 from .models.sms_full import SmsFull
 from .models.sort_call_logs import SortCallLogs
 from .models.sort_id import SortId

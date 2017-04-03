@@ -120,6 +120,7 @@ from .schedule_full import ScheduleFull
 from .schedule_summary import ScheduleSummary
 from .sip_authentication import SipAuthentication
 from .sms_forwarding import SmsForwarding
+from .sms_forwarding_params import SmsForwardingParams
 from .sms_full import SmsFull
 from .sort_call_logs import SortCallLogs
 from .sort_id import SortId

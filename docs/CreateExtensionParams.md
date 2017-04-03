@@ -3,6 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**voicemail** | [**Voicemail**](Voicemail.md) | Voicemail object | [optional] 
+**call_notifications** | [**CallNotifications**](CallNotifications.md) | Call Notifications object | [optional] 
 **caller_id** | **str** | Caller ID | [optional] 
 **usage_type** | **str** | Extension type | [optional] 
 **allows_call_waiting** | **bool** | Allows call waiting | [optional] 
@@ -12,20 +14,9 @@ Name | Type | Description | Notes
 **full_name** | **str** | Contact name | [optional] 
 **timezone** | **str** | Timezone | [optional] 
 **name_greeting** | **object** | Recording lookup object | [optional] 
-**voicemail_greeting_alternate** | **object** | Recording lookup object | [optional] 
 **local_area_code** | **int** | Local area code | [optional] 
-**voicemail_greeting_enable_leave_message_prompt** | **bool** | Enable the \&quot;leave a message\&quot; prompt for voicemail | [optional] 
-**voicemail_enabled** | **bool** | Voicemail enabled | [optional] 
 **enable_outbound_calls** | **bool** | Enable outgoing calls | [optional] 
 **enable_call_waiting** | **bool** | Enable Call Waiting | [optional] 
-**voicemail_password** | **int** | Voicemail password | [optional] 
-**voicemail_greeting_type** | **str** | Voicemail greeting type | [optional] 
-**voicemail_greeting_standard** | **object** | Recording lookup object | [optional] 
-**voicemail_transcription** | **str** | Voicemail transcription type | [optional] 
-**voicemail_notifications_emails** | **list[str]** | Email notifications for voicemails. Can be a single email or an array of emails | [optional] 
-**voicemail_notifications_sms** | **str** | SMS notifications for voicemails | [optional] 
-**call_notifications_emails** | **list[str]** | Email notifications for calls. Can be a single email or an array of emails | [optional] 
-**call_notifications_sms** | **str** | SMS notifications for calls | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

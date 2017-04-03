@@ -86,8 +86,8 @@ class CallerIdPhoneNumber(object):
         :param type: The type of this CallerIdPhoneNumber.
         :type: str
         """
-        if type is not None and not re.search('extension|application', type):
-            raise ValueError("Invalid value for `type`, must be a follow pattern or equal to `/extension|application/`")
+        if type is not None and not re.search('business|personal', type):
+            raise ValueError("Invalid value for `type`, must be a follow pattern or equal to `/business|personal/`")
 
         self._type = type
 
