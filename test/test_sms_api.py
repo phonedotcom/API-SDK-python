@@ -35,7 +35,7 @@ class TestSmsApi(unittest.TestCase):
         """
         Test case for create_account_sms
 
-        Send a SMS to one or a group of recipients
+        Send a SMS to one or a group of recipients.
         """
         pass
 
@@ -43,7 +43,7 @@ class TestSmsApi(unittest.TestCase):
         """
         Test case for get_account_sms
 
-        Show details of an individual SMS
+        This service shows the details of an individual SMS.
         """
         pass
 
@@ -51,7 +51,15 @@ class TestSmsApi(unittest.TestCase):
         """
         Test case for list_account_sms
 
-        Get a list of SMS messages for an account
+        Get a list of SMS messages for an account.
+        """
+        pass
+
+    def test_patch_account_sms(self):
+        """
+        Test case for patch_account_sms
+
+        Update the is_new parameter in a sms record.
         """
         pass
 

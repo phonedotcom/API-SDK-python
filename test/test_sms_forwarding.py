@@ -35,7 +35,9 @@ class TestSmsForwarding(unittest.TestCase):
         """
         Test SmsForwarding
         """
-        model = swagger_client.models.sms_forwarding.SmsForwarding()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.sms_forwarding.SmsForwarding()
+        pass
 
 
 if __name__ == '__main__':

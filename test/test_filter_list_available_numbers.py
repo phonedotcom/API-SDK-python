@@ -35,7 +35,9 @@ class TestFilterListAvailableNumbers(unittest.TestCase):
         """
         Test FilterListAvailableNumbers
         """
-        model = swagger_client.models.filter_list_available_numbers.FilterListAvailableNumbers()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.filter_list_available_numbers.FilterListAvailableNumbers()
+        pass
 
 
 if __name__ == '__main__':

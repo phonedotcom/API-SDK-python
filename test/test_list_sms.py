@@ -35,7 +35,9 @@ class TestListSms(unittest.TestCase):
         """
         Test ListSms
         """
-        model = swagger_client.models.list_sms.ListSms()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.list_sms.ListSms()
+        pass
 
 
 if __name__ == '__main__':

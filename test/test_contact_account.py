@@ -35,7 +35,9 @@ class TestContactAccount(unittest.TestCase):
         """
         Test ContactAccount
         """
-        model = swagger_client.models.contact_account.ContactAccount()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.contact_account.ContactAccount()
+        pass
 
 
 if __name__ == '__main__':

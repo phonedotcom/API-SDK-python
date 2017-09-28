@@ -35,7 +35,9 @@ class TestCreateRouteParams(unittest.TestCase):
         """
         Test CreateRouteParams
         """
-        model = swagger_client.models.create_route_params.CreateRouteParams()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.create_route_params.CreateRouteParams()
+        pass
 
 
 if __name__ == '__main__':

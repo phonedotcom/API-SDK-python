@@ -35,7 +35,9 @@ class TestListMedia(unittest.TestCase):
         """
         Test ListMedia
         """
-        model = swagger_client.models.list_media.ListMedia()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.list_media.ListMedia()
+        pass
 
 
 if __name__ == '__main__':

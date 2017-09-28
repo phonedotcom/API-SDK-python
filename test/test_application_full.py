@@ -35,7 +35,9 @@ class TestApplicationFull(unittest.TestCase):
         """
         Test ApplicationFull
         """
-        model = swagger_client.models.application_full.ApplicationFull()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.application_full.ApplicationFull()
+        pass
 
 
 if __name__ == '__main__':

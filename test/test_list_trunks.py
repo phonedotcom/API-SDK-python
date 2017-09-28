@@ -35,7 +35,9 @@ class TestListTrunks(unittest.TestCase):
         """
         Test ListTrunks
         """
-        model = swagger_client.models.list_trunks.ListTrunks()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.list_trunks.ListTrunks()
+        pass
 
 
 if __name__ == '__main__':

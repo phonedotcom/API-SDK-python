@@ -42,8 +42,8 @@ class ApplicationsApi(object):
 
     def get_account_application(self, account_id, application_id, **kwargs):
         """
-        Show details of an individual application
-        
+        Show details of an individual Application on a given account.
+        Show details of an individual Application on a given account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -69,8 +69,8 @@ class ApplicationsApi(object):
 
     def get_account_application_with_http_info(self, account_id, application_id, **kwargs):
         """
-        Show details of an individual application
-        
+        Show details of an individual Application on a given account.
+        Show details of an individual Application on a given account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -113,14 +113,13 @@ class ApplicationsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/applications/{application_id}'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
         if 'application_id' in params:
             path_params['application_id'] = params['application_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -139,7 +138,7 @@ class ApplicationsApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/accounts/{account_id}/applications/{application_id}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -156,8 +155,8 @@ class ApplicationsApi(object):
 
     def list_account_applications(self, account_id, **kwargs):
         """
-        Get a list of applications you have defined
-        Get a list of an account available applications
+        This service lists the Applications on a given account
+        Show details of an individual Application on a given account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -189,8 +188,8 @@ class ApplicationsApi(object):
 
     def list_account_applications_with_http_info(self, account_id, **kwargs):
         """
-        Get a list of applications you have defined
-        Get a list of an account available applications
+        This service lists the Applications on a given account
+        Show details of an individual Application on a given account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -240,28 +239,27 @@ class ApplicationsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/applications'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
 
-        query_params = {}
+        query_params = []
         if 'filters_id' in params:
-            query_params['filters[id]'] = params['filters_id']
+            query_params.append(('filters[id]', params['filters_id']))
             collection_formats['filters[id]'] = 'multi'
         if 'filters_name' in params:
-            query_params['filters[name]'] = params['filters_name']
+            query_params.append(('filters[name]', params['filters_name']))
             collection_formats['filters[name]'] = 'multi'
         if 'sort_id' in params:
-            query_params['sort[id]'] = params['sort_id']
+            query_params.append(('sort[id]', params['sort_id']))
         if 'sort_name' in params:
-            query_params['sort[name]'] = params['sort_name']
+            query_params.append(('sort[name]', params['sort_name']))
         if 'limit' in params:
-            query_params['limit'] = params['limit']
+            query_params.append(('limit', params['limit']))
         if 'offset' in params:
-            query_params['offset'] = params['offset']
+            query_params.append(('offset', params['offset']))
         if 'fields' in params:
-            query_params['fields'] = params['fields']
+            query_params.append(('fields', params['fields']))
 
         header_params = {}
 
@@ -280,7 +278,7 @@ class ApplicationsApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/accounts/{account_id}/applications', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

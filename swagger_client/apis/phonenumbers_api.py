@@ -42,8 +42,8 @@ class PhonenumbersApi(object):
 
     def create_account_phone_number(self, account_id, **kwargs):
         """
-        Add a phone number to an account
-        See Intro to Account Phone Numbers for more info on the properties to use.
+        Add a phone number to an account.
+        Add a phone number to an account. See Account Phone Numbers for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -69,8 +69,8 @@ class PhonenumbersApi(object):
 
     def create_account_phone_number_with_http_info(self, account_id, **kwargs):
         """
-        Add a phone number to an account
-        See Intro to Account Phone Numbers for more info on the properties to use.
+        Add a phone number to an account.
+        Add a phone number to an account. See Account Phone Numbers for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -110,12 +110,11 @@ class PhonenumbersApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/phone-numbers'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -136,7 +135,7 @@ class PhonenumbersApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api('/accounts/{account_id}/phone-numbers', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -153,8 +152,8 @@ class PhonenumbersApi(object):
 
     def get_account_phone_number(self, account_id, number_id, **kwargs):
         """
-        Show details of an individual phone number
-        See Intro to Account Phone Numbers for more info on the properties.
+        Show details of an individual phone number.
+        Show details of an individual phone number. See Account Phone Numbers for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -180,8 +179,8 @@ class PhonenumbersApi(object):
 
     def get_account_phone_number_with_http_info(self, account_id, number_id, **kwargs):
         """
-        Show details of an individual phone number
-        See Intro to Account Phone Numbers for more info on the properties.
+        Show details of an individual phone number.
+        Show details of an individual phone number. See Account Phone Numbers for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -224,14 +223,13 @@ class PhonenumbersApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/phone-numbers/{number_id}'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
         if 'number_id' in params:
             path_params['number_id'] = params['number_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -250,7 +248,7 @@ class PhonenumbersApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/accounts/{account_id}/phone-numbers/{number_id}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -267,8 +265,8 @@ class PhonenumbersApi(object):
 
     def list_account_phone_numbers(self, account_id, **kwargs):
         """
-        Get a list of phone numbers registered to an account
-        See Intro to Account Phone Numbers for more info on the properties.
+        Get a list of phone numbers registered to an account.
+        Get a list of phone numbers registered to an account. See Account Phone Numbers for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -302,8 +300,8 @@ class PhonenumbersApi(object):
 
     def list_account_phone_numbers_with_http_info(self, account_id, **kwargs):
         """
-        Get a list of phone numbers registered to an account
-        See Intro to Account Phone Numbers for more info on the properties.
+        Get a list of phone numbers registered to an account.
+        Get a list of phone numbers registered to an account. See Account Phone Numbers for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -357,33 +355,32 @@ class PhonenumbersApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/phone-numbers'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
 
-        query_params = {}
+        query_params = []
         if 'filters_id' in params:
-            query_params['filters[id]'] = params['filters_id']
+            query_params.append(('filters[id]', params['filters_id']))
             collection_formats['filters[id]'] = 'multi'
         if 'filters_name' in params:
-            query_params['filters[name]'] = params['filters_name']
+            query_params.append(('filters[name]', params['filters_name']))
             collection_formats['filters[name]'] = 'multi'
         if 'filters_phone_number' in params:
-            query_params['filters[phone_number]'] = params['filters_phone_number']
+            query_params.append(('filters[phone_number]', params['filters_phone_number']))
             collection_formats['filters[phone_number]'] = 'multi'
         if 'sort_id' in params:
-            query_params['sort[id]'] = params['sort_id']
+            query_params.append(('sort[id]', params['sort_id']))
         if 'sort_name' in params:
-            query_params['sort[name]'] = params['sort_name']
+            query_params.append(('sort[name]', params['sort_name']))
         if 'sort_phone_number' in params:
-            query_params['sort[phone_number]'] = params['sort_phone_number']
+            query_params.append(('sort[phone_number]', params['sort_phone_number']))
         if 'limit' in params:
-            query_params['limit'] = params['limit']
+            query_params.append(('limit', params['limit']))
         if 'offset' in params:
-            query_params['offset'] = params['offset']
+            query_params.append(('offset', params['offset']))
         if 'fields' in params:
-            query_params['fields'] = params['fields']
+            query_params.append(('fields', params['fields']))
 
         header_params = {}
 
@@ -402,7 +399,7 @@ class PhonenumbersApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/accounts/{account_id}/phone-numbers', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -419,8 +416,8 @@ class PhonenumbersApi(object):
 
     def replace_account_phone_number(self, account_id, number_id, **kwargs):
         """
-        Update the settings for an existing phone number on your account
-        See Intro to Account Phone Numbers for more info on the properties.
+        Update the settings for an existing phone number on your account.
+        Update the settings for an existing phone number on your account. See Account Phone Numbers for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -447,8 +444,8 @@ class PhonenumbersApi(object):
 
     def replace_account_phone_number_with_http_info(self, account_id, number_id, **kwargs):
         """
-        Update the settings for an existing phone number on your account
-        See Intro to Account Phone Numbers for more info on the properties.
+        Update the settings for an existing phone number on your account.
+        Update the settings for an existing phone number on your account. See Account Phone Numbers for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -492,14 +489,13 @@ class PhonenumbersApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/phone-numbers/{number_id}'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
         if 'number_id' in params:
             path_params['number_id'] = params['number_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -520,7 +516,7 @@ class PhonenumbersApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'PUT',
+        return self.api_client.call_api('/accounts/{account_id}/phone-numbers/{number_id}', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,

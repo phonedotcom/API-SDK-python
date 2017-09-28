@@ -35,7 +35,9 @@ class TestCallDetails(unittest.TestCase):
         """
         Test CallDetails
         """
-        model = swagger_client.models.call_details.CallDetails()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.call_details.CallDetails()
+        pass
 
 
 if __name__ == '__main__':

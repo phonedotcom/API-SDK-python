@@ -35,7 +35,9 @@ class TestListCallLogs(unittest.TestCase):
         """
         Test ListCallLogs
         """
-        model = swagger_client.models.list_call_logs.ListCallLogs()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.list_call_logs.ListCallLogs()
+        pass
 
 
 if __name__ == '__main__':

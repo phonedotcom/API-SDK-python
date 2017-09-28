@@ -35,7 +35,9 @@ class TestTrunkSummary(unittest.TestCase):
         """
         Test TrunkSummary
         """
-        model = swagger_client.models.trunk_summary.TrunkSummary()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.trunk_summary.TrunkSummary()
+        pass
 
 
 if __name__ == '__main__':

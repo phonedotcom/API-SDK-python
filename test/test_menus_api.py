@@ -35,7 +35,7 @@ class TestMenusApi(unittest.TestCase):
         """
         Test case for create_account_menu
 
-        Create an individual menu
+        Create an individual menu.
         """
         pass
 
@@ -43,7 +43,7 @@ class TestMenusApi(unittest.TestCase):
         """
         Test case for delete_account_menu
 
-        Delete an individual menu
+        Delete an individual menu.
         """
         pass
 
@@ -51,7 +51,7 @@ class TestMenusApi(unittest.TestCase):
         """
         Test case for get_account_menu
 
-        Show details of an individual menu
+        Show details of an individual menu.
         """
         pass
 
@@ -59,7 +59,7 @@ class TestMenusApi(unittest.TestCase):
         """
         Test case for list_account_menus
 
-        Get a list of menus for an account
+        Get a list of menus for an account.
         """
         pass
 
@@ -67,7 +67,7 @@ class TestMenusApi(unittest.TestCase):
         """
         Test case for replace_account_menu
 
-        Replace an individual menu
+        Replace an individual menu.
         """
         pass
 

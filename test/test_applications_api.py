@@ -35,7 +35,7 @@ class TestApplicationsApi(unittest.TestCase):
         """
         Test case for get_account_application
 
-        Show details of an individual application
+        Show details of an individual Application on a given account.
         """
         pass
 
@@ -43,7 +43,7 @@ class TestApplicationsApi(unittest.TestCase):
         """
         Test case for list_account_applications
 
-        Get a list of applications you have defined
+        This service lists the Applications on a given account
         """
         pass
 

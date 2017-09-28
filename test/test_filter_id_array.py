@@ -35,7 +35,9 @@ class TestFilterIdArray(unittest.TestCase):
         """
         Test FilterIdArray
         """
-        model = swagger_client.models.filter_id_array.FilterIdArray()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.filter_id_array.FilterIdArray()
+        pass
 
 
 if __name__ == '__main__':

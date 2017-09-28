@@ -35,7 +35,9 @@ class TestPingResponse(unittest.TestCase):
         """
         Test PingResponse
         """
-        model = swagger_client.models.ping_response.PingResponse()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.ping_response.PingResponse()
+        pass
 
 
 if __name__ == '__main__':

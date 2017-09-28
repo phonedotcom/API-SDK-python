@@ -35,7 +35,9 @@ class TestMediaFull(unittest.TestCase):
         """
         Test MediaFull
         """
-        model = swagger_client.models.media_full.MediaFull()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.media_full.MediaFull()
+        pass
 
 
 if __name__ == '__main__':

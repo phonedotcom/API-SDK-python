@@ -35,7 +35,9 @@ class TestMenuSummary(unittest.TestCase):
         """
         Test MenuSummary
         """
-        model = swagger_client.models.menu_summary.MenuSummary()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.menu_summary.MenuSummary()
+        pass
 
 
 if __name__ == '__main__':

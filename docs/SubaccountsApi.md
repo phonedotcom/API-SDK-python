@@ -13,11 +13,11 @@ Method | HTTP request | Description
 
 Add a subaccount for the authenticated user or client
 
-This service shows the details of an individual Subaccount.
+Add a subaccount for the authenticated user or client
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -31,7 +31,7 @@ swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = swagger_client.SubaccountsApi()
 account_id = 56 # int | Account ID
-data = swagger_client.CreateSubaccountParams() # CreateSubaccountParams | SMS data
+data = swagger_client.CreateSubaccountParams() # CreateSubaccountParams | Subaccount data
 
 try: 
     # Add a subaccount for the authenticated user or client
@@ -46,7 +46,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **int**| Account ID | 
- **data** | [**CreateSubaccountParams**](CreateSubaccountParams.md)| SMS data | 
+ **data** | [**CreateSubaccountParams**](CreateSubaccountParams.md)| Subaccount data | 
 
 ### Return type
 
@@ -68,11 +68,11 @@ Name | Type | Description  | Notes
 
 Get a list of subaccounts for the authenticated user or client
 
-This service lists the Subaccount of the authenticated client. In most cases, there will not be any.
+Get a list of subaccounts for the authenticated user or client
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException

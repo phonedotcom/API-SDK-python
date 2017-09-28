@@ -67,7 +67,7 @@ class TestMediaApi(unittest.TestCase):
         """
         Test case for list_account_media
 
-        Get a list of media recordings for an account
+        Get a list of media recordings for an account.
         """
         pass
 
@@ -83,7 +83,7 @@ class TestMediaApi(unittest.TestCase):
         """
         Test case for replace_account_media_tts
 
-        Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+        Update a media object to your account.
         """
         pass
 

@@ -151,53 +151,52 @@ class NumberregionsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/phone-numbers/available/regions'.replace('{format}', 'json')
         path_params = {}
 
-        query_params = {}
+        query_params = []
         if 'filters_country_code' in params:
-            query_params['filters[country_code]'] = params['filters_country_code']
+            query_params.append(('filters[country_code]', params['filters_country_code']))
             collection_formats['filters[country_code]'] = 'multi'
         if 'filters_npa' in params:
-            query_params['filters[npa]'] = params['filters_npa']
+            query_params.append(('filters[npa]', params['filters_npa']))
             collection_formats['filters[npa]'] = 'multi'
         if 'filters_nxx' in params:
-            query_params['filters[nxx]'] = params['filters_nxx']
+            query_params.append(('filters[nxx]', params['filters_nxx']))
             collection_formats['filters[nxx]'] = 'multi'
         if 'filters_is_toll_free' in params:
-            query_params['filters[is_toll_free]'] = params['filters_is_toll_free']
+            query_params.append(('filters[is_toll_free]', params['filters_is_toll_free']))
             collection_formats['filters[is_toll_free]'] = 'multi'
         if 'filters_city' in params:
-            query_params['filters[city]'] = params['filters_city']
+            query_params.append(('filters[city]', params['filters_city']))
             collection_formats['filters[city]'] = 'multi'
         if 'filters_province_postal_code' in params:
-            query_params['filters[province_postal_code]'] = params['filters_province_postal_code']
+            query_params.append(('filters[province_postal_code]', params['filters_province_postal_code']))
             collection_formats['filters[province_postal_code]'] = 'multi'
         if 'filters_country_postal_code' in params:
-            query_params['filters[country_postal_code]'] = params['filters_country_postal_code']
+            query_params.append(('filters[country_postal_code]', params['filters_country_postal_code']))
             collection_formats['filters[country_postal_code]'] = 'csv'
         if 'sort_country_code' in params:
-            query_params['sort[country_code]'] = params['sort_country_code']
+            query_params.append(('sort[country_code]', params['sort_country_code']))
         if 'sort_npa' in params:
-            query_params['sort[npa]'] = params['sort_npa']
+            query_params.append(('sort[npa]', params['sort_npa']))
         if 'sort_nxx' in params:
-            query_params['sort[nxx]'] = params['sort_nxx']
+            query_params.append(('sort[nxx]', params['sort_nxx']))
         if 'sort_is_toll_free' in params:
-            query_params['sort[is_toll_free]'] = params['sort_is_toll_free']
+            query_params.append(('sort[is_toll_free]', params['sort_is_toll_free']))
         if 'sort_city' in params:
-            query_params['sort[city]'] = params['sort_city']
+            query_params.append(('sort[city]', params['sort_city']))
         if 'sort_province_postal_code' in params:
-            query_params['sort[province_postal_code]'] = params['sort_province_postal_code']
+            query_params.append(('sort[province_postal_code]', params['sort_province_postal_code']))
         if 'sort_country_postal_code' in params:
-            query_params['sort[country_postal_code]'] = params['sort_country_postal_code']
+            query_params.append(('sort[country_postal_code]', params['sort_country_postal_code']))
         if 'limit' in params:
-            query_params['limit'] = params['limit']
+            query_params.append(('limit', params['limit']))
         if 'offset' in params:
-            query_params['offset'] = params['offset']
+            query_params.append(('offset', params['offset']))
         if 'fields' in params:
-            query_params['fields'] = params['fields']
+            query_params.append(('fields', params['fields']))
         if 'group_by' in params:
-            query_params['group_by'] = params['group_by']
+            query_params.append(('group_by', params['group_by']))
             collection_formats['group_by'] = 'csv'
 
         header_params = {}
@@ -217,7 +216,7 @@ class NumberregionsApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/phone-numbers/available/regions', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

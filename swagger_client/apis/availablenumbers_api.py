@@ -141,52 +141,51 @@ class AvailablenumbersApi(object):
 
         collection_formats = {}
 
-        resource_path = '/phone-numbers/available'.replace('{format}', 'json')
         path_params = {}
 
-        query_params = {}
+        query_params = []
         if 'filters_phone_number' in params:
-            query_params['filters[phone_number]'] = params['filters_phone_number']
+            query_params.append(('filters[phone_number]', params['filters_phone_number']))
             collection_formats['filters[phone_number]'] = 'multi'
         if 'filters_country_code' in params:
-            query_params['filters[country_code]'] = params['filters_country_code']
+            query_params.append(('filters[country_code]', params['filters_country_code']))
             collection_formats['filters[country_code]'] = 'multi'
         if 'filters_npa' in params:
-            query_params['filters[npa]'] = params['filters_npa']
+            query_params.append(('filters[npa]', params['filters_npa']))
             collection_formats['filters[npa]'] = 'multi'
         if 'filters_nxx' in params:
-            query_params['filters[nxx]'] = params['filters_nxx']
+            query_params.append(('filters[nxx]', params['filters_nxx']))
             collection_formats['filters[nxx]'] = 'multi'
         if 'filters_xxxx' in params:
-            query_params['filters[xxxx]'] = params['filters_xxxx']
+            query_params.append(('filters[xxxx]', params['filters_xxxx']))
             collection_formats['filters[xxxx]'] = 'multi'
         if 'filters_city' in params:
-            query_params['filters[city]'] = params['filters_city']
+            query_params.append(('filters[city]', params['filters_city']))
             collection_formats['filters[city]'] = 'multi'
         if 'filters_province' in params:
-            query_params['filters[province]'] = params['filters_province']
+            query_params.append(('filters[province]', params['filters_province']))
             collection_formats['filters[province]'] = 'multi'
         if 'filters_country' in params:
-            query_params['filters[country]'] = params['filters_country']
+            query_params.append(('filters[country]', params['filters_country']))
             collection_formats['filters[country]'] = 'multi'
         if 'filters_price' in params:
-            query_params['filters[price]'] = params['filters_price']
+            query_params.append(('filters[price]', params['filters_price']))
             collection_formats['filters[price]'] = 'multi'
         if 'filters_category' in params:
-            query_params['filters[category]'] = params['filters_category']
+            query_params.append(('filters[category]', params['filters_category']))
             collection_formats['filters[category]'] = 'multi'
         if 'sort_internal' in params:
-            query_params['sort[internal]'] = params['sort_internal']
+            query_params.append(('sort[internal]', params['sort_internal']))
         if 'sort_price' in params:
-            query_params['sort[price]'] = params['sort_price']
+            query_params.append(('sort[price]', params['sort_price']))
         if 'sort_phone_number' in params:
-            query_params['sort[phone_number]'] = params['sort_phone_number']
+            query_params.append(('sort[phone_number]', params['sort_phone_number']))
         if 'limit' in params:
-            query_params['limit'] = params['limit']
+            query_params.append(('limit', params['limit']))
         if 'offset' in params:
-            query_params['offset'] = params['offset']
+            query_params.append(('offset', params['offset']))
         if 'fields' in params:
-            query_params['fields'] = params['fields']
+            query_params.append(('fields', params['fields']))
 
         header_params = {}
 
@@ -205,7 +204,7 @@ class AvailablenumbersApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/phone-numbers/available', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

@@ -35,7 +35,7 @@ class TestQueuesApi(unittest.TestCase):
         """
         Test case for create_account_queue
 
-        Create a queue
+        Create a queue.
         """
         pass
 
@@ -43,7 +43,7 @@ class TestQueuesApi(unittest.TestCase):
         """
         Test case for delete_account_queue
 
-        Delete a queue
+        Delete a queue.
         """
         pass
 
@@ -51,7 +51,7 @@ class TestQueuesApi(unittest.TestCase):
         """
         Test case for get_account_queue
 
-        Show details of an individual queue
+        Show details of an individual queue.
         """
         pass
 
@@ -59,7 +59,7 @@ class TestQueuesApi(unittest.TestCase):
         """
         Test case for list_account_queues
 
-        Get a list of queues for an account
+        Get a list of queues for an account.
         """
         pass
 
@@ -67,7 +67,7 @@ class TestQueuesApi(unittest.TestCase):
         """
         Test case for replace_account_queue
 
-        Replace a queue
+        Replace a queue.
         """
         pass
 

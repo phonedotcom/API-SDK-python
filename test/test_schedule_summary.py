@@ -35,7 +35,9 @@ class TestScheduleSummary(unittest.TestCase):
         """
         Test ScheduleSummary
         """
-        model = swagger_client.models.schedule_summary.ScheduleSummary()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.schedule_summary.ScheduleSummary()
+        pass
 
 
 if __name__ == '__main__':

@@ -35,7 +35,15 @@ class TestDevicesApi(unittest.TestCase):
         """
         Test case for create_account_device
 
-        Register a generic VoIP device
+        Register a generic VoIP device.
+        """
+        pass
+
+    def test_delete_account_device(self):
+        """
+        Test case for delete_account_device
+
+        Delete a VoIP device.
         """
         pass
 
@@ -43,7 +51,7 @@ class TestDevicesApi(unittest.TestCase):
         """
         Test case for get_account_device
 
-        Show details of an individual VoIP device
+        Show details of an individual VoIP device.
         """
         pass
 
@@ -51,7 +59,7 @@ class TestDevicesApi(unittest.TestCase):
         """
         Test case for list_account_devices
 
-        Get a list of VoIP devices associated with your account
+        Get a list of VoIP devices associated with your account.
         """
         pass
 
@@ -59,7 +67,7 @@ class TestDevicesApi(unittest.TestCase):
         """
         Test case for replace_account_device
 
-        Update the settings for an individual VoIP device
+        Update the details of an individual VoIP device.
         """
         pass
 

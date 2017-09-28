@@ -35,7 +35,9 @@ class TestFilterIdDirectionFrom(unittest.TestCase):
         """
         Test FilterIdDirectionFrom
         """
-        model = swagger_client.models.filter_id_direction_from.FilterIdDirectionFrom()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.filter_id_direction_from.FilterIdDirectionFrom()
+        pass
 
 
 if __name__ == '__main__':

@@ -35,7 +35,9 @@ class TestListGroups(unittest.TestCase):
         """
         Test ListGroups
         """
-        model = swagger_client.models.list_groups.ListGroups()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.list_groups.ListGroups()
+        pass
 
 
 if __name__ == '__main__':

@@ -35,7 +35,9 @@ class TestExpressServiceCodeFull(unittest.TestCase):
         """
         Test ExpressServiceCodeFull
         """
-        model = swagger_client.models.express_service_code_full.ExpressServiceCodeFull()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.express_service_code_full.ExpressServiceCodeFull()
+        pass
 
 
 if __name__ == '__main__':

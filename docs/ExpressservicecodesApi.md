@@ -5,7 +5,7 @@ All URIs are relative to *https://api.phone.com/v4*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_account_express_srv_code**](ExpressservicecodesApi.md#get_account_express_srv_code) | **GET** /accounts/{account_id}/express-service-codes/{code_id} | Show details of an account Express Service Code
-[**list_account_express_srv_codes**](ExpressservicecodesApi.md#list_account_express_srv_codes) | **GET** /accounts/{account_id}/express-service-codes | Get the Express Service Code associated with your account in list format
+[**list_account_express_srv_codes**](ExpressservicecodesApi.md#list_account_express_srv_codes) | **GET** /accounts/{account_id}/express-service-codes | Get the Express Service Code associated with your account in list format.
 
 
 # **get_account_express_srv_code**
@@ -17,7 +17,7 @@ This service shows the details of an Account Express Service Code.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -66,13 +66,13 @@ Name | Type | Description  | Notes
 # **list_account_express_srv_codes**
 > ListExpressServiceCodes list_account_express_srv_codes(account_id, filters_id=filters_id)
 
-Get the Express Service Code associated with your account in list format
+Get the Express Service Code associated with your account in list format.
 
-See Express Service Codes for more detail.
+Get the Express Service Code associated with your account in list format. See Express Service Codes for more detail.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -89,7 +89,7 @@ account_id = 56 # int | Account ID
 filters_id = ['filters_id_example'] # list[str] | ID filter (optional)
 
 try: 
-    # Get the Express Service Code associated with your account in list format
+    # Get the Express Service Code associated with your account in list format.
     api_response = api_instance.list_account_express_srv_codes(account_id, filters_id=filters_id)
     pprint(api_response)
 except ApiException as e:

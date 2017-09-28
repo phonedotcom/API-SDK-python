@@ -102,10 +102,9 @@ class DefaultApi(object):
 
         collection_formats = {}
 
-        resource_path = '/ping'.replace('{format}', 'json')
         path_params = {}
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -124,7 +123,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/ping', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

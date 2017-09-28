@@ -35,7 +35,7 @@ class TestExtensionsApi(unittest.TestCase):
         """
         Test case for create_account_extension
 
-        Create an individual extension
+        Create an individual extension.
         """
         pass
 
@@ -43,7 +43,7 @@ class TestExtensionsApi(unittest.TestCase):
         """
         Test case for get_account_extension
 
-        Show details of an individual extension
+        Show details of an individual extension.
         """
         pass
 
@@ -51,7 +51,7 @@ class TestExtensionsApi(unittest.TestCase):
         """
         Test case for list_account_extensions
 
-        Get a list of extensions visible to the authenticated user or client
+        Get a list of extensions visible to the authenticated user or client.
         """
         pass
 
@@ -59,7 +59,7 @@ class TestExtensionsApi(unittest.TestCase):
         """
         Test case for replace_account_extension
 
-        Replace an individual extension
+        Replace an individual extension.
         """
         pass
 

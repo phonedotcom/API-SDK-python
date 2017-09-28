@@ -35,7 +35,9 @@ class TestReplacePhoneNumberParams(unittest.TestCase):
         """
         Test ReplacePhoneNumberParams
         """
-        model = swagger_client.models.replace_phone_number_params.ReplacePhoneNumberParams()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.replace_phone_number_params.ReplacePhoneNumberParams()
+        pass
 
 
 if __name__ == '__main__':

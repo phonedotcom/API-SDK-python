@@ -35,7 +35,9 @@ class TestDeviceSummary(unittest.TestCase):
         """
         Test DeviceSummary
         """
-        model = swagger_client.models.device_summary.DeviceSummary()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.device_summary.DeviceSummary()
+        pass
 
 
 if __name__ == '__main__':

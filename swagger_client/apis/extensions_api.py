@@ -42,8 +42,8 @@ class ExtensionsApi(object):
 
     def create_account_extension(self, account_id, **kwargs):
         """
-        Create an individual extension
-        This service shows how to create a virtual extension.
+        Create an individual extension.
+        Create an individual extension. See extension for more details.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -69,8 +69,8 @@ class ExtensionsApi(object):
 
     def create_account_extension_with_http_info(self, account_id, **kwargs):
         """
-        Create an individual extension
-        This service shows how to create a virtual extension.
+        Create an individual extension.
+        Create an individual extension. See extension for more details.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -110,12 +110,11 @@ class ExtensionsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/extensions'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -136,7 +135,7 @@ class ExtensionsApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api('/accounts/{account_id}/extensions', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -153,8 +152,8 @@ class ExtensionsApi(object):
 
     def get_account_extension(self, account_id, extension_id, **kwargs):
         """
-        Show details of an individual extension
-        This service shows the details of an individual Extension.
+        Show details of an individual extension.
+        Show details of an individual extension. See extension for more details.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -180,8 +179,8 @@ class ExtensionsApi(object):
 
     def get_account_extension_with_http_info(self, account_id, extension_id, **kwargs):
         """
-        Show details of an individual extension
-        This service shows the details of an individual Extension.
+        Show details of an individual extension.
+        Show details of an individual extension. See extension for more details.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -224,14 +223,13 @@ class ExtensionsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/extensions/{extension_id}'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
         if 'extension_id' in params:
             path_params['extension_id'] = params['extension_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -250,7 +248,7 @@ class ExtensionsApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/accounts/{account_id}/extensions/{extension_id}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -267,8 +265,8 @@ class ExtensionsApi(object):
 
     def list_account_extensions(self, account_id, **kwargs):
         """
-        Get a list of extensions visible to the authenticated user or client
-        This service lists the visible extensions on a given account.
+        Get a list of extensions visible to the authenticated user or client.
+        Get a list of extensions visible to the authenticated user or client. See extension for more details.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -302,8 +300,8 @@ class ExtensionsApi(object):
 
     def list_account_extensions_with_http_info(self, account_id, **kwargs):
         """
-        Get a list of extensions visible to the authenticated user or client
-        This service lists the visible extensions on a given account.
+        Get a list of extensions visible to the authenticated user or client.
+        Get a list of extensions visible to the authenticated user or client. See extension for more details.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -357,33 +355,32 @@ class ExtensionsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/extensions'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
 
-        query_params = {}
+        query_params = []
         if 'filters_id' in params:
-            query_params['filters[id]'] = params['filters_id']
+            query_params.append(('filters[id]', params['filters_id']))
             collection_formats['filters[id]'] = 'multi'
         if 'filters_extension' in params:
-            query_params['filters[extension]'] = params['filters_extension']
+            query_params.append(('filters[extension]', params['filters_extension']))
             collection_formats['filters[extension]'] = 'multi'
         if 'filters_name' in params:
-            query_params['filters[name]'] = params['filters_name']
+            query_params.append(('filters[name]', params['filters_name']))
             collection_formats['filters[name]'] = 'multi'
         if 'sort_id' in params:
-            query_params['sort[id]'] = params['sort_id']
+            query_params.append(('sort[id]', params['sort_id']))
         if 'sort_extension' in params:
-            query_params['sort[extension]'] = params['sort_extension']
+            query_params.append(('sort[extension]', params['sort_extension']))
         if 'sort_name' in params:
-            query_params['sort[name]'] = params['sort_name']
+            query_params.append(('sort[name]', params['sort_name']))
         if 'limit' in params:
-            query_params['limit'] = params['limit']
+            query_params.append(('limit', params['limit']))
         if 'offset' in params:
-            query_params['offset'] = params['offset']
+            query_params.append(('offset', params['offset']))
         if 'fields' in params:
-            query_params['fields'] = params['fields']
+            query_params.append(('fields', params['fields']))
 
         header_params = {}
 
@@ -402,7 +399,7 @@ class ExtensionsApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/accounts/{account_id}/extensions', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -419,8 +416,8 @@ class ExtensionsApi(object):
 
     def replace_account_extension(self, account_id, extension_id, **kwargs):
         """
-        Replace an individual extension
-        This service shows how to update an individual extension.
+        Replace an individual extension.
+        Replace an individual extension. See extension for more details.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -447,8 +444,8 @@ class ExtensionsApi(object):
 
     def replace_account_extension_with_http_info(self, account_id, extension_id, **kwargs):
         """
-        Replace an individual extension
-        This service shows how to update an individual extension.
+        Replace an individual extension.
+        Replace an individual extension. See extension for more details.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -492,14 +489,13 @@ class ExtensionsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/extensions/{extension_id}'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
         if 'extension_id' in params:
             path_params['extension_id'] = params['extension_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -520,7 +516,7 @@ class ExtensionsApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'PUT',
+        return self.api_client.call_api('/accounts/{account_id}/extensions/{extension_id}', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,

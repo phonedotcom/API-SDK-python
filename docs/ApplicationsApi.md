@@ -4,20 +4,20 @@ All URIs are relative to *https://api.phone.com/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_account_application**](ApplicationsApi.md#get_account_application) | **GET** /accounts/{account_id}/applications/{application_id} | Show details of an individual application
-[**list_account_applications**](ApplicationsApi.md#list_account_applications) | **GET** /accounts/{account_id}/applications | Get a list of applications you have defined
+[**get_account_application**](ApplicationsApi.md#get_account_application) | **GET** /accounts/{account_id}/applications/{application_id} | Show details of an individual Application on a given account.
+[**list_account_applications**](ApplicationsApi.md#list_account_applications) | **GET** /accounts/{account_id}/applications | This service lists the Applications on a given account
 
 
 # **get_account_application**
 > ApplicationFull get_account_application(account_id, application_id)
 
-Show details of an individual application
+Show details of an individual Application on a given account.
 
-
+Show details of an individual Application on a given account.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -34,7 +34,7 @@ account_id = 56 # int | Account ID
 application_id = 56 # int | Application ID
 
 try: 
-    # Show details of an individual application
+    # Show details of an individual Application on a given account.
     api_response = api_instance.get_account_application(account_id, application_id)
     pprint(api_response)
 except ApiException as e:
@@ -66,13 +66,13 @@ Name | Type | Description  | Notes
 # **list_account_applications**
 > ListApplications list_account_applications(account_id, filters_id=filters_id, filters_name=filters_name, sort_id=sort_id, sort_name=sort_name, limit=limit, offset=offset, fields=fields)
 
-Get a list of applications you have defined
+This service lists the Applications on a given account
 
-Get a list of an account available applications
+Show details of an individual Application on a given account.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -95,7 +95,7 @@ offset = 56 # int | Results to skip (optional)
 fields = 'fields_example' # str | Field set (optional)
 
 try: 
-    # Get a list of applications you have defined
+    # This service lists the Applications on a given account
     api_response = api_instance.list_account_applications(account_id, filters_id=filters_id, filters_name=filters_name, sort_id=sort_id, sort_name=sort_name, limit=limit, offset=offset, fields=fields)
     pprint(api_response)
 except ApiException as e:

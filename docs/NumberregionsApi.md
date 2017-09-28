@@ -16,7 +16,7 @@ This service lists the quantities of available phone numbers by region.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException

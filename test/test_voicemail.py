@@ -35,7 +35,9 @@ class TestVoicemail(unittest.TestCase):
         """
         Test Voicemail
         """
-        model = swagger_client.models.voicemail.Voicemail()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.voicemail.Voicemail()
+        pass
 
 
 if __name__ == '__main__':

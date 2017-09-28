@@ -35,7 +35,9 @@ class TestListExtensions(unittest.TestCase):
         """
         Test ListExtensions
         """
-        model = swagger_client.models.list_extensions.ListExtensions()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.list_extensions.ListExtensions()
+        pass
 
 
 if __name__ == '__main__':

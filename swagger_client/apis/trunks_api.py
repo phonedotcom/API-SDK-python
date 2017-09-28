@@ -42,8 +42,8 @@ class TrunksApi(object):
 
     def create_account_trunk(self, account_id, data, **kwargs):
         """
-        Add a trunk record with SIP information
-        For more on the input fields, see Account Trunks.
+        Add a trunk record with SIP information.
+        Add a trunk record with SIP information. See Account Trunks for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -69,8 +69,8 @@ class TrunksApi(object):
 
     def create_account_trunk_with_http_info(self, account_id, data, **kwargs):
         """
-        Add a trunk record with SIP information
-        For more on the input fields, see Account Trunks.
+        Add a trunk record with SIP information.
+        Add a trunk record with SIP information. See Account Trunks for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -113,12 +113,11 @@ class TrunksApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/trunks'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -139,7 +138,7 @@ class TrunksApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api('/accounts/{account_id}/trunks', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -156,8 +155,8 @@ class TrunksApi(object):
 
     def delete_account_trunk(self, account_id, trunk_id, **kwargs):
         """
-        Delete a trunk from account
-        This service deletes a trunk from the account. For more on the properties of trunks, see Account Trunks.
+        Delete a trunk from account.
+        Delete a trunk from account. See Account Trunks for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -170,7 +169,7 @@ class TrunksApi(object):
             for asynchronous request. (optional)
         :param int account_id: Account ID (required)
         :param int trunk_id: Trunk ID (required)
-        :return: DeleteTrunk
+        :return: DeleteEntry
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -183,8 +182,8 @@ class TrunksApi(object):
 
     def delete_account_trunk_with_http_info(self, account_id, trunk_id, **kwargs):
         """
-        Delete a trunk from account
-        This service deletes a trunk from the account. For more on the properties of trunks, see Account Trunks.
+        Delete a trunk from account.
+        Delete a trunk from account. See Account Trunks for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -197,7 +196,7 @@ class TrunksApi(object):
             for asynchronous request. (optional)
         :param int account_id: Account ID (required)
         :param int trunk_id: Trunk ID (required)
-        :return: DeleteTrunk
+        :return: DeleteEntry
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -227,14 +226,13 @@ class TrunksApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/trunks/{trunk_id}'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
         if 'trunk_id' in params:
             path_params['trunk_id'] = params['trunk_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -253,14 +251,14 @@ class TrunksApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'DELETE',
+        return self.api_client.call_api('/accounts/{account_id}/trunks/{trunk_id}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='DeleteTrunk',
+                                        response_type='DeleteEntry',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -270,8 +268,8 @@ class TrunksApi(object):
 
     def get_account_trunk(self, account_id, trunk_id, **kwargs):
         """
-        Show details of an individual trunk
-        This service shows the details of an individual Trunk.
+        Show details of an individual trunk.
+        Show details of an individual trunk. See Account Trunks for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -297,8 +295,8 @@ class TrunksApi(object):
 
     def get_account_trunk_with_http_info(self, account_id, trunk_id, **kwargs):
         """
-        Show details of an individual trunk
-        This service shows the details of an individual Trunk.
+        Show details of an individual trunk.
+        Show details of an individual trunk. See Account Trunks for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -341,14 +339,13 @@ class TrunksApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/trunks/{trunk_id}'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
         if 'trunk_id' in params:
             path_params['trunk_id'] = params['trunk_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -367,7 +364,7 @@ class TrunksApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/accounts/{account_id}/trunks/{trunk_id}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -384,8 +381,8 @@ class TrunksApi(object):
 
     def list_account_trunks(self, account_id, **kwargs):
         """
-        Get a list of trunks for an account
-        See Account Trunks for more info on the properties.
+        Get a list of trunks for an account.
+        Get a list of trunks for an account. See Account Trunks for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -417,8 +414,8 @@ class TrunksApi(object):
 
     def list_account_trunks_with_http_info(self, account_id, **kwargs):
         """
-        Get a list of trunks for an account
-        See Account Trunks for more info on the properties.
+        Get a list of trunks for an account.
+        Get a list of trunks for an account. See Account Trunks for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -468,28 +465,27 @@ class TrunksApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/trunks'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
 
-        query_params = {}
+        query_params = []
         if 'filters_id' in params:
-            query_params['filters[id]'] = params['filters_id']
+            query_params.append(('filters[id]', params['filters_id']))
             collection_formats['filters[id]'] = 'multi'
         if 'filters_name' in params:
-            query_params['filters[name]'] = params['filters_name']
+            query_params.append(('filters[name]', params['filters_name']))
             collection_formats['filters[name]'] = 'multi'
         if 'sort_id' in params:
-            query_params['sort[id]'] = params['sort_id']
+            query_params.append(('sort[id]', params['sort_id']))
         if 'sort_name' in params:
-            query_params['sort[name]'] = params['sort_name']
+            query_params.append(('sort[name]', params['sort_name']))
         if 'limit' in params:
-            query_params['limit'] = params['limit']
+            query_params.append(('limit', params['limit']))
         if 'offset' in params:
-            query_params['offset'] = params['offset']
+            query_params.append(('offset', params['offset']))
         if 'fields' in params:
-            query_params['fields'] = params['fields']
+            query_params.append(('fields', params['fields']))
 
         header_params = {}
 
@@ -508,7 +504,7 @@ class TrunksApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/accounts/{account_id}/trunks', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -525,8 +521,8 @@ class TrunksApi(object):
 
     def replace_account_trunk(self, account_id, trunk_id, data, **kwargs):
         """
-        Replace parameters in a trunk
-        For more on the input fields, see Account Trunks.
+        Replace parameters in a trunk.
+        Replace parameters in a trunk. See Account Trunks for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -553,8 +549,8 @@ class TrunksApi(object):
 
     def replace_account_trunk_with_http_info(self, account_id, trunk_id, data, **kwargs):
         """
-        Replace parameters in a trunk
-        For more on the input fields, see Account Trunks.
+        Replace parameters in a trunk.
+        Replace parameters in a trunk. See Account Trunks for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -601,14 +597,13 @@ class TrunksApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/trunks/{trunk_id}'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
         if 'trunk_id' in params:
             path_params['trunk_id'] = params['trunk_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -629,7 +624,7 @@ class TrunksApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'PUT',
+        return self.api_client.call_api('/accounts/{account_id}/trunks/{trunk_id}', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,

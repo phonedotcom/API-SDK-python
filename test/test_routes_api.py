@@ -35,7 +35,7 @@ class TestRoutesApi(unittest.TestCase):
         """
         Test case for create_route
 
-        Add a new address book contact for an extension
+        Add a new route to the account.
         """
         pass
 
@@ -43,7 +43,7 @@ class TestRoutesApi(unittest.TestCase):
         """
         Test case for delete_account_route
 
-        
+        Delete a route from the account.
         """
         pass
 
@@ -51,7 +51,7 @@ class TestRoutesApi(unittest.TestCase):
         """
         Test case for get_account_route
 
-        Show details of an individual route
+        Show details of an individual route.
         """
         pass
 
@@ -59,7 +59,7 @@ class TestRoutesApi(unittest.TestCase):
         """
         Test case for list_account_routes
 
-        Get a list of routes for an account
+        Get a list of routes for an account.
         """
         pass
 
@@ -67,7 +67,7 @@ class TestRoutesApi(unittest.TestCase):
         """
         Test case for replace_account_route
 
-        
+        Update the information of a route.
         """
         pass
 

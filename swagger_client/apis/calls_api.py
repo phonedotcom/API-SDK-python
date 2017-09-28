@@ -43,7 +43,7 @@ class CallsApi(object):
     def create_account_call(self, account_id, **kwargs):
         """
         Make a phone call
-        
+        Make a phone call. See Calls for more details and how to setup caller id's. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Calls API with the following definition: POST https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/calls
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -70,7 +70,7 @@ class CallsApi(object):
     def create_account_call_with_http_info(self, account_id, **kwargs):
         """
         Make a phone call
-        
+        Make a phone call. See Calls for more details and how to setup caller id's. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Calls API with the following definition: POST https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/calls
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -110,12 +110,11 @@ class CallsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/calls'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -136,7 +135,7 @@ class CallsApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api('/accounts/{account_id}/calls', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,

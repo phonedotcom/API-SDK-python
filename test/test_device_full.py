@@ -35,7 +35,9 @@ class TestDeviceFull(unittest.TestCase):
         """
         Test DeviceFull
         """
-        model = swagger_client.models.device_full.DeviceFull()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.device_full.DeviceFull()
+        pass
 
 
 if __name__ == '__main__':

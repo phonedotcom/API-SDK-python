@@ -43,7 +43,7 @@ class TestExpressservicecodesApi(unittest.TestCase):
         """
         Test case for list_account_express_srv_codes
 
-        Get the Express Service Code associated with your account in list format
+        Get the Express Service Code associated with your account in list format.
         """
         pass
 

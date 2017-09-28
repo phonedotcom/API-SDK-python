@@ -35,7 +35,9 @@ class TestMediaSummary(unittest.TestCase):
         """
         Test MediaSummary
         """
-        model = swagger_client.models.media_summary.MediaSummary()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.media_summary.MediaSummary()
+        pass
 
 
 if __name__ == '__main__':

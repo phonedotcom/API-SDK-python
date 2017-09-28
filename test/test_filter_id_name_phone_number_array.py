@@ -35,7 +35,9 @@ class TestFilterIdNamePhoneNumberArray(unittest.TestCase):
         """
         Test FilterIdNamePhoneNumberArray
         """
-        model = swagger_client.models.filter_id_name_phone_number_array.FilterIdNamePhoneNumberArray()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.filter_id_name_phone_number_array.FilterIdNamePhoneNumberArray()
+        pass
 
 
 if __name__ == '__main__':

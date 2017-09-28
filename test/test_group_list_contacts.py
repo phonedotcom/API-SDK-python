@@ -35,7 +35,9 @@ class TestGroupListContacts(unittest.TestCase):
         """
         Test GroupListContacts
         """
-        model = swagger_client.models.group_list_contacts.GroupListContacts()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.group_list_contacts.GroupListContacts()
+        pass
 
 
 if __name__ == '__main__':

@@ -4,22 +4,22 @@ All URIs are relative to *https://api.phone.com/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_account_phone_number**](PhonenumbersApi.md#create_account_phone_number) | **POST** /accounts/{account_id}/phone-numbers | Add a phone number to an account
-[**get_account_phone_number**](PhonenumbersApi.md#get_account_phone_number) | **GET** /accounts/{account_id}/phone-numbers/{number_id} | Show details of an individual phone number
-[**list_account_phone_numbers**](PhonenumbersApi.md#list_account_phone_numbers) | **GET** /accounts/{account_id}/phone-numbers | Get a list of phone numbers registered to an account
-[**replace_account_phone_number**](PhonenumbersApi.md#replace_account_phone_number) | **PUT** /accounts/{account_id}/phone-numbers/{number_id} | Update the settings for an existing phone number on your account
+[**create_account_phone_number**](PhonenumbersApi.md#create_account_phone_number) | **POST** /accounts/{account_id}/phone-numbers | Add a phone number to an account.
+[**get_account_phone_number**](PhonenumbersApi.md#get_account_phone_number) | **GET** /accounts/{account_id}/phone-numbers/{number_id} | Show details of an individual phone number.
+[**list_account_phone_numbers**](PhonenumbersApi.md#list_account_phone_numbers) | **GET** /accounts/{account_id}/phone-numbers | Get a list of phone numbers registered to an account.
+[**replace_account_phone_number**](PhonenumbersApi.md#replace_account_phone_number) | **PUT** /accounts/{account_id}/phone-numbers/{number_id} | Update the settings for an existing phone number on your account.
 
 
 # **create_account_phone_number**
 > PhoneNumberFull create_account_phone_number(account_id, data=data)
 
-Add a phone number to an account
+Add a phone number to an account.
 
-See Intro to Account Phone Numbers for more info on the properties to use.
+Add a phone number to an account. See Account Phone Numbers for more info on the properties.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -36,7 +36,7 @@ account_id = 56 # int | Account ID
 data = swagger_client.CreatePhoneNumberParams() # CreatePhoneNumberParams | Phone Number data (optional)
 
 try: 
-    # Add a phone number to an account
+    # Add a phone number to an account.
     api_response = api_instance.create_account_phone_number(account_id, data=data)
     pprint(api_response)
 except ApiException as e:
@@ -68,13 +68,13 @@ Name | Type | Description  | Notes
 # **get_account_phone_number**
 > PhoneNumberFull get_account_phone_number(account_id, number_id)
 
-Show details of an individual phone number
+Show details of an individual phone number.
 
-See Intro to Account Phone Numbers for more info on the properties.
+Show details of an individual phone number. See Account Phone Numbers for more info on the properties.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -91,7 +91,7 @@ account_id = 56 # int | Account ID
 number_id = 56 # int | Number ID
 
 try: 
-    # Show details of an individual phone number
+    # Show details of an individual phone number.
     api_response = api_instance.get_account_phone_number(account_id, number_id)
     pprint(api_response)
 except ApiException as e:
@@ -123,13 +123,13 @@ Name | Type | Description  | Notes
 # **list_account_phone_numbers**
 > ListPhoneNumbers list_account_phone_numbers(account_id, filters_id=filters_id, filters_name=filters_name, filters_phone_number=filters_phone_number, sort_id=sort_id, sort_name=sort_name, sort_phone_number=sort_phone_number, limit=limit, offset=offset, fields=fields)
 
-Get a list of phone numbers registered to an account
+Get a list of phone numbers registered to an account.
 
-See Intro to Account Phone Numbers for more info on the properties.
+Get a list of phone numbers registered to an account. See Account Phone Numbers for more info on the properties.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -154,7 +154,7 @@ offset = 56 # int | Results to skip (optional)
 fields = 'fields_example' # str | Field set (optional)
 
 try: 
-    # Get a list of phone numbers registered to an account
+    # Get a list of phone numbers registered to an account.
     api_response = api_instance.list_account_phone_numbers(account_id, filters_id=filters_id, filters_name=filters_name, filters_phone_number=filters_phone_number, sort_id=sort_id, sort_name=sort_name, sort_phone_number=sort_phone_number, limit=limit, offset=offset, fields=fields)
     pprint(api_response)
 except ApiException as e:
@@ -194,13 +194,13 @@ Name | Type | Description  | Notes
 # **replace_account_phone_number**
 > PhoneNumberFull replace_account_phone_number(account_id, number_id, data=data)
 
-Update the settings for an existing phone number on your account
+Update the settings for an existing phone number on your account.
 
-See Intro to Account Phone Numbers for more info on the properties.
+Update the settings for an existing phone number on your account. See Account Phone Numbers for more info on the properties.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -218,7 +218,7 @@ number_id = 56 # int | Number ID
 data = swagger_client.ReplacePhoneNumberParams() # ReplacePhoneNumberParams | Phone Number data (optional)
 
 try: 
-    # Update the settings for an existing phone number on your account
+    # Update the settings for an existing phone number on your account.
     api_response = api_instance.replace_account_phone_number(account_id, number_id, data=data)
     pprint(api_response)
 except ApiException as e:

@@ -35,7 +35,9 @@ class TestListRoutes(unittest.TestCase):
         """
         Test ListRoutes
         """
-        model = swagger_client.models.list_routes.ListRoutes()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.list_routes.ListRoutes()
+        pass
 
 
 if __name__ == '__main__':

@@ -42,8 +42,8 @@ class ContactsApi(object):
 
     def create_account_extension_contact(self, account_id, extension_id, **kwargs):
         """
-        Add a new address book contact for an extension
-        For more on the input fields, see Account Contacts.
+        Add a new address book contact for an extension.
+        Add a new address book contact for an extension. See Account Contacts for more info on the fields in each item.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -70,8 +70,8 @@ class ContactsApi(object):
 
     def create_account_extension_contact_with_http_info(self, account_id, extension_id, **kwargs):
         """
-        Add a new address book contact for an extension
-        For more on the input fields, see Account Contacts.
+        Add a new address book contact for an extension.
+        Add a new address book contact for an extension. See Account Contacts for more info on the fields in each item.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -115,14 +115,13 @@ class ContactsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/extensions/{extension_id}/contacts'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
         if 'extension_id' in params:
             path_params['extension_id'] = params['extension_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -143,7 +142,7 @@ class ContactsApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api('/accounts/{account_id}/extensions/{extension_id}/contacts', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -160,8 +159,8 @@ class ContactsApi(object):
 
     def delete_account_extension_contact(self, account_id, extension_id, contact_id, **kwargs):
         """
-        
-        
+        Delete a contact from the address book.
+        Delete a contact from the address book. See Account Contacts for more info on the fields in each item.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -175,7 +174,7 @@ class ContactsApi(object):
         :param int account_id: Account ID (required)
         :param int extension_id: Extension ID (required)
         :param int contact_id: Contact ID (required)
-        :return: DeleteContact
+        :return: DeleteEntry
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -188,8 +187,8 @@ class ContactsApi(object):
 
     def delete_account_extension_contact_with_http_info(self, account_id, extension_id, contact_id, **kwargs):
         """
-        
-        
+        Delete a contact from the address book.
+        Delete a contact from the address book. See Account Contacts for more info on the fields in each item.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -203,7 +202,7 @@ class ContactsApi(object):
         :param int account_id: Account ID (required)
         :param int extension_id: Extension ID (required)
         :param int contact_id: Contact ID (required)
-        :return: DeleteContact
+        :return: DeleteEntry
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -236,7 +235,6 @@ class ContactsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/extensions/{extension_id}/contacts/{contact_id}'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
@@ -245,7 +243,7 @@ class ContactsApi(object):
         if 'contact_id' in params:
             path_params['contact_id'] = params['contact_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -264,14 +262,14 @@ class ContactsApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'DELETE',
+        return self.api_client.call_api('/accounts/{account_id}/extensions/{extension_id}/contacts/{contact_id}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='DeleteContact',
+                                        response_type='DeleteEntry',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -281,8 +279,8 @@ class ContactsApi(object):
 
     def get_account_extension_contact(self, account_id, extension_id, contact_id, **kwargs):
         """
-        Retrieve the details of an address book contact
-        For more info on the fields shown, see Account Contacts.
+        Retrieve the details of an address book contact.
+        Retrieve the details of an address book contact. See Account Contacts for more info on the fields in each item.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -309,8 +307,8 @@ class ContactsApi(object):
 
     def get_account_extension_contact_with_http_info(self, account_id, extension_id, contact_id, **kwargs):
         """
-        Retrieve the details of an address book contact
-        For more info on the fields shown, see Account Contacts.
+        Retrieve the details of an address book contact.
+        Retrieve the details of an address book contact. See Account Contacts for more info on the fields in each item.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -357,7 +355,6 @@ class ContactsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/extensions/{extension_id}/contacts/{contact_id}'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
@@ -366,7 +363,7 @@ class ContactsApi(object):
         if 'contact_id' in params:
             path_params['contact_id'] = params['contact_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -385,7 +382,7 @@ class ContactsApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/accounts/{account_id}/extensions/{extension_id}/contacts/{contact_id}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -402,8 +399,8 @@ class ContactsApi(object):
 
     def list_account_extension_contacts(self, account_id, extension_id, **kwargs):
         """
-        Show a list of address book contacts
-        See Account Contacts for more info on the fields in each item.
+        Show the Caller ID options a given extension can use.
+        Show the Caller ID options a given extension can use. See Intro to Caller IDs for more on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -437,8 +434,8 @@ class ContactsApi(object):
 
     def list_account_extension_contacts_with_http_info(self, account_id, extension_id, **kwargs):
         """
-        Show a list of address book contacts
-        See Account Contacts for more info on the fields in each item.
+        Show the Caller ID options a given extension can use.
+        Show the Caller ID options a given extension can use. See Intro to Caller IDs for more on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -493,33 +490,32 @@ class ContactsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/extensions/{extension_id}/contacts'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
         if 'extension_id' in params:
             path_params['extension_id'] = params['extension_id']
 
-        query_params = {}
+        query_params = []
         if 'filters_id' in params:
-            query_params['filters[id]'] = params['filters_id']
+            query_params.append(('filters[id]', params['filters_id']))
             collection_formats['filters[id]'] = 'multi'
         if 'filters_group_id' in params:
-            query_params['filters[group_id]'] = params['filters_group_id']
+            query_params.append(('filters[group_id]', params['filters_group_id']))
             collection_formats['filters[group_id]'] = 'multi'
         if 'filters_updated_at' in params:
-            query_params['filters[updated_at]'] = params['filters_updated_at']
+            query_params.append(('filters[updated_at]', params['filters_updated_at']))
             collection_formats['filters[updated_at]'] = 'multi'
         if 'sort_id' in params:
-            query_params['sort[id]'] = params['sort_id']
+            query_params.append(('sort[id]', params['sort_id']))
         if 'sort_updated_at' in params:
-            query_params['sort[updated_at]'] = params['sort_updated_at']
+            query_params.append(('sort[updated_at]', params['sort_updated_at']))
         if 'limit' in params:
-            query_params['limit'] = params['limit']
+            query_params.append(('limit', params['limit']))
         if 'offset' in params:
-            query_params['offset'] = params['offset']
+            query_params.append(('offset', params['offset']))
         if 'fields' in params:
-            query_params['fields'] = params['fields']
+            query_params.append(('fields', params['fields']))
 
         header_params = {}
 
@@ -538,7 +534,7 @@ class ContactsApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/accounts/{account_id}/extensions/{extension_id}/contacts', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -555,8 +551,8 @@ class ContactsApi(object):
 
     def replace_account_extension_contact(self, account_id, extension_id, contact_id, **kwargs):
         """
-        
-        For more on the input fields, see Account Contacts.
+        Update the info of a contact in the address book.
+        Update the info of a contact in the address book. See Account Contacts for more info on the fields in each item.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -584,8 +580,8 @@ class ContactsApi(object):
 
     def replace_account_extension_contact_with_http_info(self, account_id, extension_id, contact_id, **kwargs):
         """
-        
-        For more on the input fields, see Account Contacts.
+        Update the info of a contact in the address book.
+        Update the info of a contact in the address book. See Account Contacts for more info on the fields in each item.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -633,7 +629,6 @@ class ContactsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/extensions/{extension_id}/contacts/{contact_id}'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
@@ -642,7 +637,7 @@ class ContactsApi(object):
         if 'contact_id' in params:
             path_params['contact_id'] = params['contact_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -663,7 +658,7 @@ class ContactsApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'PUT',
+        return self.api_client.call_api('/accounts/{account_id}/extensions/{extension_id}/contacts/{contact_id}', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,

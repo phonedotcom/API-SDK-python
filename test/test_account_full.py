@@ -35,7 +35,9 @@ class TestAccountFull(unittest.TestCase):
         """
         Test AccountFull
         """
-        model = swagger_client.models.account_full.AccountFull()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.account_full.AccountFull()
+        pass
 
 
 if __name__ == '__main__':

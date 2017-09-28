@@ -35,7 +35,9 @@ class TestApplicationSummary(unittest.TestCase):
         """
         Test ApplicationSummary
         """
-        model = swagger_client.models.application_summary.ApplicationSummary()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.application_summary.ApplicationSummary()
+        pass
 
 
 if __name__ == '__main__':

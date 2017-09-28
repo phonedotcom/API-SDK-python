@@ -35,7 +35,9 @@ class TestHoldMusic(unittest.TestCase):
         """
         Test HoldMusic
         """
-        model = swagger_client.models.hold_music.HoldMusic()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.hold_music.HoldMusic()
+        pass
 
 
 if __name__ == '__main__':

@@ -35,7 +35,9 @@ class TestTrunkFull(unittest.TestCase):
         """
         Test TrunkFull
         """
-        model = swagger_client.models.trunk_full.TrunkFull()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.trunk_full.TrunkFull()
+        pass
 
 
 if __name__ == '__main__':

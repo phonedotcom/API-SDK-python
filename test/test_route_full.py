@@ -35,7 +35,9 @@ class TestRouteFull(unittest.TestCase):
         """
         Test RouteFull
         """
-        model = swagger_client.models.route_full.RouteFull()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.route_full.RouteFull()
+        pass
 
 
 if __name__ == '__main__':

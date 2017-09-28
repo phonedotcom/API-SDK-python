@@ -35,7 +35,9 @@ class TestScheduleFull(unittest.TestCase):
         """
         Test ScheduleFull
         """
-        model = swagger_client.models.schedule_full.ScheduleFull()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.schedule_full.ScheduleFull()
+        pass
 
 
 if __name__ == '__main__':

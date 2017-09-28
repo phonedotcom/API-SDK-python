@@ -42,8 +42,8 @@ class GroupsApi(object):
 
     def create_account_extension_contact_group(self, account_id, extension_id, data, **kwargs):
         """
-        
-        See Account Contact Groups for more info on the properties.
+        Add a new contact group to an account extension.
+        Add a new contact group to an account extension. See Account Contact Groups for details on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -56,7 +56,7 @@ class GroupsApi(object):
             for asynchronous request. (optional)
         :param int account_id: Account ID (required)
         :param int extension_id: Extension ID (required)
-        :param CreateGroupParams data: Group name (required)
+        :param CreateGroupParams data: Group data (required)
         :return: GroupFull
                  If the method is called asynchronously,
                  returns the request thread.
@@ -70,8 +70,8 @@ class GroupsApi(object):
 
     def create_account_extension_contact_group_with_http_info(self, account_id, extension_id, data, **kwargs):
         """
-        
-        See Account Contact Groups for more info on the properties.
+        Add a new contact group to an account extension.
+        Add a new contact group to an account extension. See Account Contact Groups for details on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -84,7 +84,7 @@ class GroupsApi(object):
             for asynchronous request. (optional)
         :param int account_id: Account ID (required)
         :param int extension_id: Extension ID (required)
-        :param CreateGroupParams data: Group name (required)
+        :param CreateGroupParams data: Group data (required)
         :return: GroupFull
                  If the method is called asynchronously,
                  returns the request thread.
@@ -118,14 +118,13 @@ class GroupsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/extensions/{extension_id}/contact-groups'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
         if 'extension_id' in params:
             path_params['extension_id'] = params['extension_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -146,7 +145,7 @@ class GroupsApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api('/accounts/{account_id}/extensions/{extension_id}/contact-groups', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -163,8 +162,8 @@ class GroupsApi(object):
 
     def delete_account_extension_contact_group(self, account_id, extension_id, group_id, **kwargs):
         """
-        Delete an addressbook group
-        
+        Delete a contact group from the address book.
+        Delete a contact group from the address book. See Account Contact Groups for details on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -178,7 +177,7 @@ class GroupsApi(object):
         :param int account_id: Account ID (required)
         :param int extension_id: Extension ID (required)
         :param int group_id: Group ID (required)
-        :return: DeleteGroup
+        :return: DeleteEntry
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -191,8 +190,8 @@ class GroupsApi(object):
 
     def delete_account_extension_contact_group_with_http_info(self, account_id, extension_id, group_id, **kwargs):
         """
-        Delete an addressbook group
-        
+        Delete a contact group from the address book.
+        Delete a contact group from the address book. See Account Contact Groups for details on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -206,7 +205,7 @@ class GroupsApi(object):
         :param int account_id: Account ID (required)
         :param int extension_id: Extension ID (required)
         :param int group_id: Group ID (required)
-        :return: DeleteGroup
+        :return: DeleteEntry
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -239,7 +238,6 @@ class GroupsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/extensions/{extension_id}/contact-groups/{group_id}'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
@@ -248,7 +246,7 @@ class GroupsApi(object):
         if 'group_id' in params:
             path_params['group_id'] = params['group_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -267,14 +265,14 @@ class GroupsApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'DELETE',
+        return self.api_client.call_api('/accounts/{account_id}/extensions/{extension_id}/contact-groups/{group_id}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='DeleteGroup',
+                                        response_type='DeleteEntry',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -284,8 +282,8 @@ class GroupsApi(object):
 
     def get_account_extension_contact_group(self, account_id, extension_id, group_id, **kwargs):
         """
-        
-        See Account Contact Groups for more info on the properties.
+        Retrieve the information of a contact group.
+        Retrieve the information of a contact group. See Account Contact Groups for details on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -312,8 +310,8 @@ class GroupsApi(object):
 
     def get_account_extension_contact_group_with_http_info(self, account_id, extension_id, group_id, **kwargs):
         """
-        
-        See Account Contact Groups for more info on the properties.
+        Retrieve the information of a contact group.
+        Retrieve the information of a contact group. See Account Contact Groups for details on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -360,7 +358,6 @@ class GroupsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/extensions/{extension_id}/contact-groups/{group_id}'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
@@ -369,7 +366,7 @@ class GroupsApi(object):
         if 'group_id' in params:
             path_params['group_id'] = params['group_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -388,7 +385,7 @@ class GroupsApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/accounts/{account_id}/extensions/{extension_id}/contact-groups/{group_id}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -405,8 +402,8 @@ class GroupsApi(object):
 
     def list_account_extension_contact_groups(self, account_id, extension_id, **kwargs):
         """
-        Show a list of contact groups belonging to an extension
-        See Account Contact Groups for details on the properties.
+        Show a list of contact groups belonging to an extension.
+        Show a list of contact groups belonging to an extension. See Account Contact Groups for details on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -439,8 +436,8 @@ class GroupsApi(object):
 
     def list_account_extension_contact_groups_with_http_info(self, account_id, extension_id, **kwargs):
         """
-        Show a list of contact groups belonging to an extension
-        See Account Contact Groups for details on the properties.
+        Show a list of contact groups belonging to an extension.
+        Show a list of contact groups belonging to an extension. See Account Contact Groups for details on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -494,30 +491,29 @@ class GroupsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/extensions/{extension_id}/contact-groups'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
         if 'extension_id' in params:
             path_params['extension_id'] = params['extension_id']
 
-        query_params = {}
+        query_params = []
         if 'filters_id' in params:
-            query_params['filters[id]'] = params['filters_id']
+            query_params.append(('filters[id]', params['filters_id']))
             collection_formats['filters[id]'] = 'multi'
         if 'filters_name' in params:
-            query_params['filters[name]'] = params['filters_name']
+            query_params.append(('filters[name]', params['filters_name']))
             collection_formats['filters[name]'] = 'multi'
         if 'sort_id' in params:
-            query_params['sort[id]'] = params['sort_id']
+            query_params.append(('sort[id]', params['sort_id']))
         if 'sort_name' in params:
-            query_params['sort[name]'] = params['sort_name']
+            query_params.append(('sort[name]', params['sort_name']))
         if 'limit' in params:
-            query_params['limit'] = params['limit']
+            query_params.append(('limit', params['limit']))
         if 'offset' in params:
-            query_params['offset'] = params['offset']
+            query_params.append(('offset', params['offset']))
         if 'fields' in params:
-            query_params['fields'] = params['fields']
+            query_params.append(('fields', params['fields']))
 
         header_params = {}
 
@@ -536,7 +532,7 @@ class GroupsApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/accounts/{account_id}/extensions/{extension_id}/contact-groups', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -553,8 +549,8 @@ class GroupsApi(object):
 
     def replace_account_extension_contact_group(self, account_id, extension_id, group_id, data, **kwargs):
         """
-        
-        See Account Contact Groups for more info on the properties.
+        Update the information of a contact group.
+        Update the information of a contact group. See Account Contact Groups for details on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -568,7 +564,7 @@ class GroupsApi(object):
         :param int account_id: Account ID (required)
         :param int extension_id: Extension ID (required)
         :param int group_id: Group ID (required)
-        :param CreateGroupParams data: Group name (required)
+        :param CreateGroupParams data: Group data (required)
         :return: GroupFull
                  If the method is called asynchronously,
                  returns the request thread.
@@ -582,8 +578,8 @@ class GroupsApi(object):
 
     def replace_account_extension_contact_group_with_http_info(self, account_id, extension_id, group_id, data, **kwargs):
         """
-        
-        See Account Contact Groups for more info on the properties.
+        Update the information of a contact group.
+        Update the information of a contact group. See Account Contact Groups for details on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -597,7 +593,7 @@ class GroupsApi(object):
         :param int account_id: Account ID (required)
         :param int extension_id: Extension ID (required)
         :param int group_id: Group ID (required)
-        :param CreateGroupParams data: Group name (required)
+        :param CreateGroupParams data: Group data (required)
         :return: GroupFull
                  If the method is called asynchronously,
                  returns the request thread.
@@ -634,7 +630,6 @@ class GroupsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/extensions/{extension_id}/contact-groups/{group_id}'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
@@ -643,7 +638,7 @@ class GroupsApi(object):
         if 'group_id' in params:
             path_params['group_id'] = params['group_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -664,7 +659,7 @@ class GroupsApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'PUT',
+        return self.api_client.call_api('/accounts/{account_id}/extensions/{extension_id}/contact-groups/{group_id}', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,

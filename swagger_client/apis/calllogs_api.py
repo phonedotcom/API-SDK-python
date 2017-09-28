@@ -43,7 +43,7 @@ class CalllogsApi(object):
     def get_account_call_logs(self, account_id, call_id, **kwargs):
         """
         Show details of an individual Call Log entry
-        See Call Logs for more detail.
+        Show details of an individual Call Log entry. See Call Logs for more detail.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -70,7 +70,7 @@ class CalllogsApi(object):
     def get_account_call_logs_with_http_info(self, account_id, call_id, **kwargs):
         """
         Show details of an individual Call Log entry
-        See Call Logs for more detail.
+        Show details of an individual Call Log entry. See Call Logs for more detail.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -113,14 +113,13 @@ class CalllogsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/call-logs/{call_id}'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
         if 'call_id' in params:
             path_params['call_id'] = params['call_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -139,7 +138,7 @@ class CalllogsApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/accounts/{account_id}/call-logs/{call_id}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -157,7 +156,7 @@ class CalllogsApi(object):
     def list_account_call_logs(self, account_id, **kwargs):
         """
         Get a list of call details associated with your account
-        See Call Logs for more detail.
+        Get a list of call details associated with your account. See Call Logs for more detail.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -196,7 +195,7 @@ class CalllogsApi(object):
     def list_account_call_logs_with_http_info(self, account_id, **kwargs):
         """
         Get a list of call details associated with your account
-        See Call Logs for more detail.
+        Get a list of call details associated with your account. See Call Logs for more detail.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -262,41 +261,40 @@ class CalllogsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/call-logs'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
 
-        query_params = {}
+        query_params = []
         if 'filters_id' in params:
-            query_params['filters[id]'] = params['filters_id']
+            query_params.append(('filters[id]', params['filters_id']))
             collection_formats['filters[id]'] = 'multi'
         if 'filters_start_time' in params:
-            query_params['filters[start_time]'] = params['filters_start_time']
+            query_params.append(('filters[start_time]', params['filters_start_time']))
             collection_formats['filters[start_time]'] = 'multi'
         if 'filters_created_at' in params:
-            query_params['filters[created_at]'] = params['filters_created_at']
+            query_params.append(('filters[created_at]', params['filters_created_at']))
         if 'filters_direction' in params:
-            query_params['filters[direction]'] = params['filters_direction']
+            query_params.append(('filters[direction]', params['filters_direction']))
         if 'filters_called_number' in params:
-            query_params['filters[called_number]'] = params['filters_called_number']
+            query_params.append(('filters[called_number]', params['filters_called_number']))
         if 'filters_type' in params:
-            query_params['filters[type]'] = params['filters_type']
+            query_params.append(('filters[type]', params['filters_type']))
         if 'filters_extension' in params:
-            query_params['filters[extension]'] = params['filters_extension']
+            query_params.append(('filters[extension]', params['filters_extension']))
             collection_formats['filters[extension]'] = 'multi'
         if 'sort_id' in params:
-            query_params['sort[id]'] = params['sort_id']
+            query_params.append(('sort[id]', params['sort_id']))
         if 'sort_start_time' in params:
-            query_params['sort[start_time]'] = params['sort_start_time']
+            query_params.append(('sort[start_time]', params['sort_start_time']))
         if 'sort_created_at' in params:
-            query_params['sort[created_at]'] = params['sort_created_at']
+            query_params.append(('sort[created_at]', params['sort_created_at']))
         if 'limit' in params:
-            query_params['limit'] = params['limit']
+            query_params.append(('limit', params['limit']))
         if 'offset' in params:
-            query_params['offset'] = params['offset']
+            query_params.append(('offset', params['offset']))
         if 'fields' in params:
-            query_params['fields'] = params['fields']
+            query_params.append(('fields', params['fields']))
 
         header_params = {}
 
@@ -315,7 +313,7 @@ class CalllogsApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/accounts/{account_id}/call-logs', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

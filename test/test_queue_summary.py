@@ -35,7 +35,9 @@ class TestQueueSummary(unittest.TestCase):
         """
         Test QueueSummary
         """
-        model = swagger_client.models.queue_summary.QueueSummary()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.queue_summary.QueueSummary()
+        pass
 
 
 if __name__ == '__main__':

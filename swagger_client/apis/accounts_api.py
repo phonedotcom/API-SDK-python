@@ -43,7 +43,7 @@ class AccountsApi(object):
     def get_account(self, account_id, **kwargs):
         """
         Retrieve details of an individual account
-        This service shows the details of an individual account. See Accounts for more info on the properties.
+        Retrieve details of an individual account. See Accounts for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -69,7 +69,7 @@ class AccountsApi(object):
     def get_account_with_http_info(self, account_id, **kwargs):
         """
         Retrieve details of an individual account
-        This service shows the details of an individual account. See Accounts for more info on the properties.
+        Retrieve details of an individual account. See Accounts for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -108,12 +108,11 @@ class AccountsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -132,7 +131,7 @@ class AccountsApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/accounts/{account_id}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -149,8 +148,8 @@ class AccountsApi(object):
 
     def list_accounts(self, **kwargs):
         """
-        Get a list of accounts visible to the authenticated user or client
-        This service lists the accounts accessible to the authenticated client. In most cases, there will only be one such account. See Accounts for more info on the properties.
+        Get a list of accounts visible to the authenticated user or client.
+        Get a list of accounts visible to the authenticated user or client. In most cases, there will only be one such account. See Accounts for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -179,8 +178,8 @@ class AccountsApi(object):
 
     def list_accounts_with_http_info(self, **kwargs):
         """
-        Get a list of accounts visible to the authenticated user or client
-        This service lists the accounts accessible to the authenticated client. In most cases, there will only be one such account. See Accounts for more info on the properties.
+        Get a list of accounts visible to the authenticated user or client.
+        Get a list of accounts visible to the authenticated user or client. In most cases, there will only be one such account. See Accounts for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -222,21 +221,20 @@ class AccountsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts'.replace('{format}', 'json')
         path_params = {}
 
-        query_params = {}
+        query_params = []
         if 'filters_id' in params:
-            query_params['filters[id]'] = params['filters_id']
+            query_params.append(('filters[id]', params['filters_id']))
             collection_formats['filters[id]'] = 'multi'
         if 'sort_id' in params:
-            query_params['sort[id]'] = params['sort_id']
+            query_params.append(('sort[id]', params['sort_id']))
         if 'limit' in params:
-            query_params['limit'] = params['limit']
+            query_params.append(('limit', params['limit']))
         if 'offset' in params:
-            query_params['offset'] = params['offset']
+            query_params.append(('offset', params['offset']))
         if 'fields' in params:
-            query_params['fields'] = params['fields']
+            query_params.append(('fields', params['fields']))
 
         header_params = {}
 
@@ -255,7 +253,7 @@ class AccountsApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/accounts', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

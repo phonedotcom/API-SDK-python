@@ -4,23 +4,23 @@ All URIs are relative to *https://api.phone.com/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_account_trunk**](TrunksApi.md#create_account_trunk) | **POST** /accounts/{account_id}/trunks | Add a trunk record with SIP information
-[**delete_account_trunk**](TrunksApi.md#delete_account_trunk) | **DELETE** /accounts/{account_id}/trunks/{trunk_id} | Delete a trunk from account
-[**get_account_trunk**](TrunksApi.md#get_account_trunk) | **GET** /accounts/{account_id}/trunks/{trunk_id} | Show details of an individual trunk
-[**list_account_trunks**](TrunksApi.md#list_account_trunks) | **GET** /accounts/{account_id}/trunks | Get a list of trunks for an account
-[**replace_account_trunk**](TrunksApi.md#replace_account_trunk) | **PUT** /accounts/{account_id}/trunks/{trunk_id} | Replace parameters in a trunk
+[**create_account_trunk**](TrunksApi.md#create_account_trunk) | **POST** /accounts/{account_id}/trunks | Add a trunk record with SIP information.
+[**delete_account_trunk**](TrunksApi.md#delete_account_trunk) | **DELETE** /accounts/{account_id}/trunks/{trunk_id} | Delete a trunk from account.
+[**get_account_trunk**](TrunksApi.md#get_account_trunk) | **GET** /accounts/{account_id}/trunks/{trunk_id} | Show details of an individual trunk.
+[**list_account_trunks**](TrunksApi.md#list_account_trunks) | **GET** /accounts/{account_id}/trunks | Get a list of trunks for an account.
+[**replace_account_trunk**](TrunksApi.md#replace_account_trunk) | **PUT** /accounts/{account_id}/trunks/{trunk_id} | Replace parameters in a trunk.
 
 
 # **create_account_trunk**
 > TrunkFull create_account_trunk(account_id, data)
 
-Add a trunk record with SIP information
+Add a trunk record with SIP information.
 
-For more on the input fields, see Account Trunks.
+Add a trunk record with SIP information. See Account Trunks for more info on the properties.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -37,7 +37,7 @@ account_id = 56 # int | Account ID
 data = swagger_client.CreateTrunkParams() # CreateTrunkParams | Trunk data
 
 try: 
-    # Add a trunk record with SIP information
+    # Add a trunk record with SIP information.
     api_response = api_instance.create_account_trunk(account_id, data)
     pprint(api_response)
 except ApiException as e:
@@ -67,15 +67,15 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_account_trunk**
-> DeleteTrunk delete_account_trunk(account_id, trunk_id)
+> DeleteEntry delete_account_trunk(account_id, trunk_id)
 
-Delete a trunk from account
+Delete a trunk from account.
 
-This service deletes a trunk from the account. For more on the properties of trunks, see Account Trunks.
+Delete a trunk from account. See Account Trunks for more info on the properties.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -92,7 +92,7 @@ account_id = 56 # int | Account ID
 trunk_id = 56 # int | Trunk ID
 
 try: 
-    # Delete a trunk from account
+    # Delete a trunk from account.
     api_response = api_instance.delete_account_trunk(account_id, trunk_id)
     pprint(api_response)
 except ApiException as e:
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeleteTrunk**](DeleteTrunk.md)
+[**DeleteEntry**](DeleteEntry.md)
 
 ### Authorization
 
@@ -124,13 +124,13 @@ Name | Type | Description  | Notes
 # **get_account_trunk**
 > TrunkFull get_account_trunk(account_id, trunk_id)
 
-Show details of an individual trunk
+Show details of an individual trunk.
 
-This service shows the details of an individual Trunk.
+Show details of an individual trunk. See Account Trunks for more info on the properties.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -147,7 +147,7 @@ account_id = 56 # int | Account ID
 trunk_id = 56 # int | Trunk ID
 
 try: 
-    # Show details of an individual trunk
+    # Show details of an individual trunk.
     api_response = api_instance.get_account_trunk(account_id, trunk_id)
     pprint(api_response)
 except ApiException as e:
@@ -179,13 +179,13 @@ Name | Type | Description  | Notes
 # **list_account_trunks**
 > ListTrunks list_account_trunks(account_id, filters_id=filters_id, filters_name=filters_name, sort_id=sort_id, sort_name=sort_name, limit=limit, offset=offset, fields=fields)
 
-Get a list of trunks for an account
+Get a list of trunks for an account.
 
-See Account Trunks for more info on the properties.
+Get a list of trunks for an account. See Account Trunks for more info on the properties.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -208,7 +208,7 @@ offset = 56 # int | Results to skip (optional)
 fields = 'fields_example' # str | Field set (optional)
 
 try: 
-    # Get a list of trunks for an account
+    # Get a list of trunks for an account.
     api_response = api_instance.list_account_trunks(account_id, filters_id=filters_id, filters_name=filters_name, sort_id=sort_id, sort_name=sort_name, limit=limit, offset=offset, fields=fields)
     pprint(api_response)
 except ApiException as e:
@@ -246,13 +246,13 @@ Name | Type | Description  | Notes
 # **replace_account_trunk**
 > TrunkFull replace_account_trunk(account_id, trunk_id, data)
 
-Replace parameters in a trunk
+Replace parameters in a trunk.
 
-For more on the input fields, see Account Trunks.
+Replace parameters in a trunk. See Account Trunks for more info on the properties.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -270,7 +270,7 @@ trunk_id = 56 # int | Trunk ID
 data = swagger_client.CreateTrunkParams() # CreateTrunkParams | Trunk data
 
 try: 
-    # Replace parameters in a trunk
+    # Replace parameters in a trunk.
     api_response = api_instance.replace_account_trunk(account_id, trunk_id, data)
     pprint(api_response)
 except ApiException as e:

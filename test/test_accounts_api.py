@@ -43,7 +43,7 @@ class TestAccountsApi(unittest.TestCase):
         """
         Test case for list_accounts
 
-        Get a list of accounts visible to the authenticated user or client
+        Get a list of accounts visible to the authenticated user or client.
         """
         pass
 

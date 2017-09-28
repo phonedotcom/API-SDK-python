@@ -35,7 +35,7 @@ class TestPhonenumbersApi(unittest.TestCase):
         """
         Test case for create_account_phone_number
 
-        Add a phone number to an account
+        Add a phone number to an account.
         """
         pass
 
@@ -43,7 +43,7 @@ class TestPhonenumbersApi(unittest.TestCase):
         """
         Test case for get_account_phone_number
 
-        Show details of an individual phone number
+        Show details of an individual phone number.
         """
         pass
 
@@ -51,7 +51,7 @@ class TestPhonenumbersApi(unittest.TestCase):
         """
         Test case for list_account_phone_numbers
 
-        Get a list of phone numbers registered to an account
+        Get a list of phone numbers registered to an account.
         """
         pass
 
@@ -59,7 +59,7 @@ class TestPhonenumbersApi(unittest.TestCase):
         """
         Test case for replace_account_phone_number
 
-        Update the settings for an existing phone number on your account
+        Update the settings for an existing phone number on your account.
         """
         pass
 

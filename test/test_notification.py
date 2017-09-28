@@ -35,7 +35,9 @@ class TestNotification(unittest.TestCase):
         """
         Test Notification
         """
-        model = swagger_client.models.notification.Notification()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.notification.Notification()
+        pass
 
 
 if __name__ == '__main__':

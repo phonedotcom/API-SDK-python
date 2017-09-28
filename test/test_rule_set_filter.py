@@ -35,7 +35,9 @@ class TestRuleSetFilter(unittest.TestCase):
         """
         Test RuleSetFilter
         """
-        model = swagger_client.models.rule_set_filter.RuleSetFilter()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.rule_set_filter.RuleSetFilter()
+        pass
 
 
 if __name__ == '__main__':

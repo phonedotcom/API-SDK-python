@@ -13,11 +13,11 @@ Method | HTTP request | Description
 
 Show details of an individual Call Log entry
 
-See Call Logs for more detail.
+Show details of an individual Call Log entry. See Call Logs for more detail.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -68,11 +68,11 @@ Name | Type | Description  | Notes
 
 Get a list of call details associated with your account
 
-See Call Logs for more detail.
+Get a list of call details associated with your account. See Call Logs for more detail.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException

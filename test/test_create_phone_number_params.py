@@ -35,7 +35,9 @@ class TestCreatePhoneNumberParams(unittest.TestCase):
         """
         Test CreatePhoneNumberParams
         """
-        model = swagger_client.models.create_phone_number_params.CreatePhoneNumberParams()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.create_phone_number_params.CreatePhoneNumberParams()
+        pass
 
 
 if __name__ == '__main__':

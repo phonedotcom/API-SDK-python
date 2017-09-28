@@ -35,7 +35,9 @@ class TestReplaceExtensionParams(unittest.TestCase):
         """
         Test ReplaceExtensionParams
         """
-        model = swagger_client.models.replace_extension_params.ReplaceExtensionParams()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.replace_extension_params.ReplaceExtensionParams()
+        pass
 
 
 if __name__ == '__main__':

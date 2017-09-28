@@ -35,7 +35,9 @@ class TestCreateMenuParams(unittest.TestCase):
         """
         Test CreateMenuParams
         """
-        model = swagger_client.models.create_menu_params.CreateMenuParams()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.create_menu_params.CreateMenuParams()
+        pass
 
 
 if __name__ == '__main__':

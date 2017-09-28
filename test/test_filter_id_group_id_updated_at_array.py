@@ -35,7 +35,9 @@ class TestFilterIdGroupIdUpdatedAtArray(unittest.TestCase):
         """
         Test FilterIdGroupIdUpdatedAtArray
         """
-        model = swagger_client.models.filter_id_group_id_updated_at_array.FilterIdGroupIdUpdatedAtArray()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.filter_id_group_id_updated_at_array.FilterIdGroupIdUpdatedAtArray()
+        pass
 
 
 if __name__ == '__main__':

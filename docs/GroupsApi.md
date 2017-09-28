@@ -4,23 +4,23 @@ All URIs are relative to *https://api.phone.com/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_account_extension_contact_group**](GroupsApi.md#create_account_extension_contact_group) | **POST** /accounts/{account_id}/extensions/{extension_id}/contact-groups | 
-[**delete_account_extension_contact_group**](GroupsApi.md#delete_account_extension_contact_group) | **DELETE** /accounts/{account_id}/extensions/{extension_id}/contact-groups/{group_id} | Delete an addressbook group
-[**get_account_extension_contact_group**](GroupsApi.md#get_account_extension_contact_group) | **GET** /accounts/{account_id}/extensions/{extension_id}/contact-groups/{group_id} | 
-[**list_account_extension_contact_groups**](GroupsApi.md#list_account_extension_contact_groups) | **GET** /accounts/{account_id}/extensions/{extension_id}/contact-groups | Show a list of contact groups belonging to an extension
-[**replace_account_extension_contact_group**](GroupsApi.md#replace_account_extension_contact_group) | **PUT** /accounts/{account_id}/extensions/{extension_id}/contact-groups/{group_id} | 
+[**create_account_extension_contact_group**](GroupsApi.md#create_account_extension_contact_group) | **POST** /accounts/{account_id}/extensions/{extension_id}/contact-groups | Add a new contact group to an account extension.
+[**delete_account_extension_contact_group**](GroupsApi.md#delete_account_extension_contact_group) | **DELETE** /accounts/{account_id}/extensions/{extension_id}/contact-groups/{group_id} | Delete a contact group from the address book.
+[**get_account_extension_contact_group**](GroupsApi.md#get_account_extension_contact_group) | **GET** /accounts/{account_id}/extensions/{extension_id}/contact-groups/{group_id} | Retrieve the information of a contact group.
+[**list_account_extension_contact_groups**](GroupsApi.md#list_account_extension_contact_groups) | **GET** /accounts/{account_id}/extensions/{extension_id}/contact-groups | Show a list of contact groups belonging to an extension.
+[**replace_account_extension_contact_group**](GroupsApi.md#replace_account_extension_contact_group) | **PUT** /accounts/{account_id}/extensions/{extension_id}/contact-groups/{group_id} | Update the information of a contact group.
 
 
 # **create_account_extension_contact_group**
 > GroupFull create_account_extension_contact_group(account_id, extension_id, data)
 
+Add a new contact group to an account extension.
 
-
-See Account Contact Groups for more info on the properties.
+Add a new contact group to an account extension. See Account Contact Groups for details on the properties.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -35,10 +35,10 @@ swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = swagger_client.GroupsApi()
 account_id = 56 # int | Account ID
 extension_id = 56 # int | Extension ID
-data = swagger_client.CreateGroupParams() # CreateGroupParams | Group name
+data = swagger_client.CreateGroupParams() # CreateGroupParams | Group data
 
 try: 
-    # 
+    # Add a new contact group to an account extension.
     api_response = api_instance.create_account_extension_contact_group(account_id, extension_id, data)
     pprint(api_response)
 except ApiException as e:
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **int**| Account ID | 
  **extension_id** | **int**| Extension ID | 
- **data** | [**CreateGroupParams**](CreateGroupParams.md)| Group name | 
+ **data** | [**CreateGroupParams**](CreateGroupParams.md)| Group data | 
 
 ### Return type
 
@@ -69,15 +69,15 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_account_extension_contact_group**
-> DeleteGroup delete_account_extension_contact_group(account_id, extension_id, group_id)
+> DeleteEntry delete_account_extension_contact_group(account_id, extension_id, group_id)
 
-Delete an addressbook group
+Delete a contact group from the address book.
 
-
+Delete a contact group from the address book. See Account Contact Groups for details on the properties.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -95,7 +95,7 @@ extension_id = 56 # int | Extension ID
 group_id = 56 # int | Group ID
 
 try: 
-    # Delete an addressbook group
+    # Delete a contact group from the address book.
     api_response = api_instance.delete_account_extension_contact_group(account_id, extension_id, group_id)
     pprint(api_response)
 except ApiException as e:
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeleteGroup**](DeleteGroup.md)
+[**DeleteEntry**](DeleteEntry.md)
 
 ### Authorization
 
@@ -128,13 +128,13 @@ Name | Type | Description  | Notes
 # **get_account_extension_contact_group**
 > GroupFull get_account_extension_contact_group(account_id, extension_id, group_id)
 
+Retrieve the information of a contact group.
 
-
-See Account Contact Groups for more info on the properties.
+Retrieve the information of a contact group. See Account Contact Groups for details on the properties.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -152,7 +152,7 @@ extension_id = 56 # int | Extension ID
 group_id = 56 # int | Group ID
 
 try: 
-    # 
+    # Retrieve the information of a contact group.
     api_response = api_instance.get_account_extension_contact_group(account_id, extension_id, group_id)
     pprint(api_response)
 except ApiException as e:
@@ -185,13 +185,13 @@ Name | Type | Description  | Notes
 # **list_account_extension_contact_groups**
 > ListGroups list_account_extension_contact_groups(account_id, extension_id, filters_id=filters_id, filters_name=filters_name, sort_id=sort_id, sort_name=sort_name, limit=limit, offset=offset, fields=fields)
 
-Show a list of contact groups belonging to an extension
+Show a list of contact groups belonging to an extension.
 
-See Account Contact Groups for details on the properties.
+Show a list of contact groups belonging to an extension. See Account Contact Groups for details on the properties.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -215,7 +215,7 @@ offset = 56 # int | Results to skip (optional)
 fields = 'fields_example' # str | Field set (optional)
 
 try: 
-    # Show a list of contact groups belonging to an extension
+    # Show a list of contact groups belonging to an extension.
     api_response = api_instance.list_account_extension_contact_groups(account_id, extension_id, filters_id=filters_id, filters_name=filters_name, sort_id=sort_id, sort_name=sort_name, limit=limit, offset=offset, fields=fields)
     pprint(api_response)
 except ApiException as e:
@@ -254,13 +254,13 @@ Name | Type | Description  | Notes
 # **replace_account_extension_contact_group**
 > GroupFull replace_account_extension_contact_group(account_id, extension_id, group_id, data)
 
+Update the information of a contact group.
 
-
-See Account Contact Groups for more info on the properties.
+Update the information of a contact group. See Account Contact Groups for details on the properties.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -276,10 +276,10 @@ api_instance = swagger_client.GroupsApi()
 account_id = 56 # int | Account ID
 extension_id = 56 # int | Extension ID
 group_id = 56 # int | Group ID
-data = swagger_client.CreateGroupParams() # CreateGroupParams | Group name
+data = swagger_client.CreateGroupParams() # CreateGroupParams | Group data
 
 try: 
-    # 
+    # Update the information of a contact group.
     api_response = api_instance.replace_account_extension_contact_group(account_id, extension_id, group_id, data)
     pprint(api_response)
 except ApiException as e:
@@ -293,7 +293,7 @@ Name | Type | Description  | Notes
  **account_id** | **int**| Account ID | 
  **extension_id** | **int**| Extension ID | 
  **group_id** | **int**| Group ID | 
- **data** | [**CreateGroupParams**](CreateGroupParams.md)| Group name | 
+ **data** | [**CreateGroupParams**](CreateGroupParams.md)| Group data | 
 
 ### Return type
 

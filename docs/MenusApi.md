@@ -4,23 +4,23 @@ All URIs are relative to *https://api.phone.com/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_account_menu**](MenusApi.md#create_account_menu) | **POST** /accounts/{account_id}/menus | Create an individual menu
-[**delete_account_menu**](MenusApi.md#delete_account_menu) | **DELETE** /accounts/{account_id}/menus/{menu_id} | Delete an individual menu
-[**get_account_menu**](MenusApi.md#get_account_menu) | **GET** /accounts/{account_id}/menus/{menu_id} | Show details of an individual menu
-[**list_account_menus**](MenusApi.md#list_account_menus) | **GET** /accounts/{account_id}/menus | Get a list of menus for an account
-[**replace_account_menu**](MenusApi.md#replace_account_menu) | **PUT** /accounts/{account_id}/menus/{menu_id} | Replace an individual menu
+[**create_account_menu**](MenusApi.md#create_account_menu) | **POST** /accounts/{account_id}/menus | Create an individual menu.
+[**delete_account_menu**](MenusApi.md#delete_account_menu) | **DELETE** /accounts/{account_id}/menus/{menu_id} | Delete an individual menu.
+[**get_account_menu**](MenusApi.md#get_account_menu) | **GET** /accounts/{account_id}/menus/{menu_id} | Show details of an individual menu.
+[**list_account_menus**](MenusApi.md#list_account_menus) | **GET** /accounts/{account_id}/menus | Get a list of menus for an account.
+[**replace_account_menu**](MenusApi.md#replace_account_menu) | **PUT** /accounts/{account_id}/menus/{menu_id} | Replace an individual menu.
 
 
 # **create_account_menu**
 > MenuFull create_account_menu(account_id, data=data)
 
-Create an individual menu
+Create an individual menu.
 
-This service creates an individual menu. See Account Menus for more info on the properties.
+Create an individual menu. See Account Menus for more info on the properties.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -37,7 +37,7 @@ account_id = 56 # int | Account ID
 data = swagger_client.CreateMenuParams() # CreateMenuParams | Menu data (optional)
 
 try: 
-    # Create an individual menu
+    # Create an individual menu.
     api_response = api_instance.create_account_menu(account_id, data=data)
     pprint(api_response)
 except ApiException as e:
@@ -67,15 +67,15 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_account_menu**
-> DeleteMenu delete_account_menu(account_id, menu_id)
+> DeleteEntry delete_account_menu(account_id, menu_id)
 
-Delete an individual menu
+Delete an individual menu.
 
-See Account Menus for more info on the properties.
+Delete an individual menu. See Account Menus for more info on the properties.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -92,7 +92,7 @@ account_id = 56 # int | Account ID
 menu_id = 56 # int | Menu ID
 
 try: 
-    # Delete an individual menu
+    # Delete an individual menu.
     api_response = api_instance.delete_account_menu(account_id, menu_id)
     pprint(api_response)
 except ApiException as e:
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeleteMenu**](DeleteMenu.md)
+[**DeleteEntry**](DeleteEntry.md)
 
 ### Authorization
 
@@ -124,13 +124,13 @@ Name | Type | Description  | Notes
 # **get_account_menu**
 > MenuFull get_account_menu(account_id, menu_id)
 
-Show details of an individual menu
+Show details of an individual menu.
 
-This service shows the details of an individual Menu.
+Show details of an individual menu. See Account Menus for more info on the properties.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -147,7 +147,7 @@ account_id = 56 # int | Account ID
 menu_id = 56 # int | Menu ID
 
 try: 
-    # Show details of an individual menu
+    # Show details of an individual menu.
     api_response = api_instance.get_account_menu(account_id, menu_id)
     pprint(api_response)
 except ApiException as e:
@@ -179,13 +179,13 @@ Name | Type | Description  | Notes
 # **list_account_menus**
 > ListMenus list_account_menus(account_id, filters_id=filters_id, filters_name=filters_name, sort_id=sort_id, sort_name=sort_name, limit=limit, offset=offset, fields=fields)
 
-Get a list of menus for an account
+Get a list of menus for an account.
 
-See Account Menus for more info on the properties.
+Get a list of menus for an account. See Account Menus for more info on the properties.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -208,7 +208,7 @@ offset = 56 # int | Results to skip (optional)
 fields = 'fields_example' # str | Field set (optional)
 
 try: 
-    # Get a list of menus for an account
+    # Get a list of menus for an account.
     api_response = api_instance.list_account_menus(account_id, filters_id=filters_id, filters_name=filters_name, sort_id=sort_id, sort_name=sort_name, limit=limit, offset=offset, fields=fields)
     pprint(api_response)
 except ApiException as e:
@@ -246,13 +246,13 @@ Name | Type | Description  | Notes
 # **replace_account_menu**
 > MenuFull replace_account_menu(account_id, menu_id, data=data)
 
-Replace an individual menu
+Replace an individual menu.
 
-See Account Menus for more info on the properties.
+Replace an individual menu. See Account Menus for more info on the properties.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -270,7 +270,7 @@ menu_id = 56 # int | Menu ID
 data = swagger_client.ReplaceMenuParams() # ReplaceMenuParams | Menu data (optional)
 
 try: 
-    # Replace an individual menu
+    # Replace an individual menu.
     api_response = api_instance.replace_account_menu(account_id, menu_id, data=data)
     pprint(api_response)
 except ApiException as e:

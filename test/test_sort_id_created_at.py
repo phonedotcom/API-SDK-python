@@ -35,7 +35,9 @@ class TestSortIdCreatedAt(unittest.TestCase):
         """
         Test SortIdCreatedAt
         """
-        model = swagger_client.models.sort_id_created_at.SortIdCreatedAt()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.sort_id_created_at.SortIdCreatedAt()
+        pass
 
 
 if __name__ == '__main__':

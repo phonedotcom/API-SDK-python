@@ -35,7 +35,9 @@ class TestRuleSetForwardItem(unittest.TestCase):
         """
         Test RuleSetForwardItem
         """
-        model = swagger_client.models.rule_set_forward_item.RuleSetForwardItem()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.rule_set_forward_item.RuleSetForwardItem()
+        pass
 
 
 if __name__ == '__main__':

@@ -42,8 +42,8 @@ class CalleridsApi(object):
 
     def get_caller_ids(self, account_id, extension_id, **kwargs):
         """
-        Show the Caller ID options a given extension can use
-        Get Caller ID
+        Show the Caller ID options a given extension can use.
+        Show the Caller ID options a given extension can use. See Intro to Caller IDs for more on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -76,8 +76,8 @@ class CalleridsApi(object):
 
     def get_caller_ids_with_http_info(self, account_id, extension_id, **kwargs):
         """
-        Show the Caller ID options a given extension can use
-        Get Caller ID
+        Show the Caller ID options a given extension can use.
+        Show the Caller ID options a given extension can use. See Intro to Caller IDs for more on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -131,30 +131,29 @@ class CalleridsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/extensions/{extension_id}/caller-ids'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
         if 'extension_id' in params:
             path_params['extension_id'] = params['extension_id']
 
-        query_params = {}
+        query_params = []
         if 'filters_number' in params:
-            query_params['filters[number]'] = params['filters_number']
+            query_params.append(('filters[number]', params['filters_number']))
             collection_formats['filters[number]'] = 'multi'
         if 'filters_name' in params:
-            query_params['filters[name]'] = params['filters_name']
+            query_params.append(('filters[name]', params['filters_name']))
             collection_formats['filters[name]'] = 'multi'
         if 'sort_number' in params:
-            query_params['sort[number]'] = params['sort_number']
+            query_params.append(('sort[number]', params['sort_number']))
         if 'sort_name' in params:
-            query_params['sort[name]'] = params['sort_name']
+            query_params.append(('sort[name]', params['sort_name']))
         if 'limit' in params:
-            query_params['limit'] = params['limit']
+            query_params.append(('limit', params['limit']))
         if 'offset' in params:
-            query_params['offset'] = params['offset']
+            query_params.append(('offset', params['offset']))
         if 'fields' in params:
-            query_params['fields'] = params['fields']
+            query_params.append(('fields', params['fields']))
 
         header_params = {}
 
@@ -173,7 +172,7 @@ class CalleridsApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/accounts/{account_id}/extensions/{extension_id}/caller-ids', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

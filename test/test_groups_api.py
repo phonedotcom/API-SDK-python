@@ -35,7 +35,7 @@ class TestGroupsApi(unittest.TestCase):
         """
         Test case for create_account_extension_contact_group
 
-        
+        Add a new contact group to an account extension.
         """
         pass
 
@@ -43,7 +43,7 @@ class TestGroupsApi(unittest.TestCase):
         """
         Test case for delete_account_extension_contact_group
 
-        Delete an addressbook group
+        Delete a contact group from the address book.
         """
         pass
 
@@ -51,7 +51,7 @@ class TestGroupsApi(unittest.TestCase):
         """
         Test case for get_account_extension_contact_group
 
-        
+        Retrieve the information of a contact group.
         """
         pass
 
@@ -59,7 +59,7 @@ class TestGroupsApi(unittest.TestCase):
         """
         Test case for list_account_extension_contact_groups
 
-        Show a list of contact groups belonging to an extension
+        Show a list of contact groups belonging to an extension.
         """
         pass
 
@@ -67,7 +67,7 @@ class TestGroupsApi(unittest.TestCase):
         """
         Test case for replace_account_extension_contact_group
 
-        
+        Update the information of a contact group.
         """
         pass
 

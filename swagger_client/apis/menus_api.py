@@ -42,8 +42,8 @@ class MenusApi(object):
 
     def create_account_menu(self, account_id, **kwargs):
         """
-        Create an individual menu
-        This service creates an individual menu. See Account Menus for more info on the properties.
+        Create an individual menu.
+        Create an individual menu. See Account Menus for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -69,8 +69,8 @@ class MenusApi(object):
 
     def create_account_menu_with_http_info(self, account_id, **kwargs):
         """
-        Create an individual menu
-        This service creates an individual menu. See Account Menus for more info on the properties.
+        Create an individual menu.
+        Create an individual menu. See Account Menus for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -110,12 +110,11 @@ class MenusApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/menus'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -136,7 +135,7 @@ class MenusApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api('/accounts/{account_id}/menus', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -153,8 +152,8 @@ class MenusApi(object):
 
     def delete_account_menu(self, account_id, menu_id, **kwargs):
         """
-        Delete an individual menu
-        See Account Menus for more info on the properties.
+        Delete an individual menu.
+        Delete an individual menu. See Account Menus for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -167,7 +166,7 @@ class MenusApi(object):
             for asynchronous request. (optional)
         :param int account_id: Account ID (required)
         :param int menu_id: Menu ID (required)
-        :return: DeleteMenu
+        :return: DeleteEntry
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -180,8 +179,8 @@ class MenusApi(object):
 
     def delete_account_menu_with_http_info(self, account_id, menu_id, **kwargs):
         """
-        Delete an individual menu
-        See Account Menus for more info on the properties.
+        Delete an individual menu.
+        Delete an individual menu. See Account Menus for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -194,7 +193,7 @@ class MenusApi(object):
             for asynchronous request. (optional)
         :param int account_id: Account ID (required)
         :param int menu_id: Menu ID (required)
-        :return: DeleteMenu
+        :return: DeleteEntry
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -224,14 +223,13 @@ class MenusApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/menus/{menu_id}'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
         if 'menu_id' in params:
             path_params['menu_id'] = params['menu_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -250,14 +248,14 @@ class MenusApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'DELETE',
+        return self.api_client.call_api('/accounts/{account_id}/menus/{menu_id}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='DeleteMenu',
+                                        response_type='DeleteEntry',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -267,8 +265,8 @@ class MenusApi(object):
 
     def get_account_menu(self, account_id, menu_id, **kwargs):
         """
-        Show details of an individual menu
-        This service shows the details of an individual Menu.
+        Show details of an individual menu.
+        Show details of an individual menu. See Account Menus for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -294,8 +292,8 @@ class MenusApi(object):
 
     def get_account_menu_with_http_info(self, account_id, menu_id, **kwargs):
         """
-        Show details of an individual menu
-        This service shows the details of an individual Menu.
+        Show details of an individual menu.
+        Show details of an individual menu. See Account Menus for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -338,14 +336,13 @@ class MenusApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/menus/{menu_id}'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
         if 'menu_id' in params:
             path_params['menu_id'] = params['menu_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -364,7 +361,7 @@ class MenusApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/accounts/{account_id}/menus/{menu_id}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -381,8 +378,8 @@ class MenusApi(object):
 
     def list_account_menus(self, account_id, **kwargs):
         """
-        Get a list of menus for an account
-        See Account Menus for more info on the properties.
+        Get a list of menus for an account.
+        Get a list of menus for an account. See Account Menus for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -414,8 +411,8 @@ class MenusApi(object):
 
     def list_account_menus_with_http_info(self, account_id, **kwargs):
         """
-        Get a list of menus for an account
-        See Account Menus for more info on the properties.
+        Get a list of menus for an account.
+        Get a list of menus for an account. See Account Menus for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -465,28 +462,27 @@ class MenusApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/menus'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
 
-        query_params = {}
+        query_params = []
         if 'filters_id' in params:
-            query_params['filters[id]'] = params['filters_id']
+            query_params.append(('filters[id]', params['filters_id']))
             collection_formats['filters[id]'] = 'multi'
         if 'filters_name' in params:
-            query_params['filters[name]'] = params['filters_name']
+            query_params.append(('filters[name]', params['filters_name']))
             collection_formats['filters[name]'] = 'multi'
         if 'sort_id' in params:
-            query_params['sort[id]'] = params['sort_id']
+            query_params.append(('sort[id]', params['sort_id']))
         if 'sort_name' in params:
-            query_params['sort[name]'] = params['sort_name']
+            query_params.append(('sort[name]', params['sort_name']))
         if 'limit' in params:
-            query_params['limit'] = params['limit']
+            query_params.append(('limit', params['limit']))
         if 'offset' in params:
-            query_params['offset'] = params['offset']
+            query_params.append(('offset', params['offset']))
         if 'fields' in params:
-            query_params['fields'] = params['fields']
+            query_params.append(('fields', params['fields']))
 
         header_params = {}
 
@@ -505,7 +501,7 @@ class MenusApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/accounts/{account_id}/menus', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -522,8 +518,8 @@ class MenusApi(object):
 
     def replace_account_menu(self, account_id, menu_id, **kwargs):
         """
-        Replace an individual menu
-        See Account Menus for more info on the properties.
+        Replace an individual menu.
+        Replace an individual menu. See Account Menus for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -550,8 +546,8 @@ class MenusApi(object):
 
     def replace_account_menu_with_http_info(self, account_id, menu_id, **kwargs):
         """
-        Replace an individual menu
-        See Account Menus for more info on the properties.
+        Replace an individual menu.
+        Replace an individual menu. See Account Menus for more info on the properties.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -595,14 +591,13 @@ class MenusApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/menus/{menu_id}'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
         if 'menu_id' in params:
             path_params['menu_id'] = params['menu_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -623,7 +618,7 @@ class MenusApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'PUT',
+        return self.api_client.call_api('/accounts/{account_id}/menus/{menu_id}', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,

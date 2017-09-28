@@ -113,14 +113,13 @@ class ExpressservicecodesApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/express-service-codes/{code_id}'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
         if 'code_id' in params:
             path_params['code_id'] = params['code_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -139,7 +138,7 @@ class ExpressservicecodesApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/accounts/{account_id}/express-service-codes/{code_id}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -156,8 +155,8 @@ class ExpressservicecodesApi(object):
 
     def list_account_express_srv_codes(self, account_id, **kwargs):
         """
-        Get the Express Service Code associated with your account in list format
-        See Express Service Codes for more detail.
+        Get the Express Service Code associated with your account in list format.
+        Get the Express Service Code associated with your account in list format. See Express Service Codes for more detail.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -183,8 +182,8 @@ class ExpressservicecodesApi(object):
 
     def list_account_express_srv_codes_with_http_info(self, account_id, **kwargs):
         """
-        Get the Express Service Code associated with your account in list format
-        See Express Service Codes for more detail.
+        Get the Express Service Code associated with your account in list format.
+        Get the Express Service Code associated with your account in list format. See Express Service Codes for more detail.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -224,14 +223,13 @@ class ExpressservicecodesApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/express-service-codes'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
 
-        query_params = {}
+        query_params = []
         if 'filters_id' in params:
-            query_params['filters[id]'] = params['filters_id']
+            query_params.append(('filters[id]', params['filters_id']))
             collection_formats['filters[id]'] = 'multi'
 
         header_params = {}
@@ -251,7 +249,7 @@ class ExpressservicecodesApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/accounts/{account_id}/express-service-codes', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

@@ -4,23 +4,23 @@ All URIs are relative to *https://api.phone.com/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_account_queue**](QueuesApi.md#create_account_queue) | **POST** /accounts/{account_id}/queues | Create a queue
-[**delete_account_queue**](QueuesApi.md#delete_account_queue) | **DELETE** /accounts/{account_id}/queues/{queue_id} | Delete a queue
-[**get_account_queue**](QueuesApi.md#get_account_queue) | **GET** /accounts/{account_id}/queues/{queue_id} | Show details of an individual queue
-[**list_account_queues**](QueuesApi.md#list_account_queues) | **GET** /accounts/{account_id}/queues | Get a list of queues for an account
-[**replace_account_queue**](QueuesApi.md#replace_account_queue) | **PUT** /accounts/{account_id}/queues/{queue_id} | Replace a queue
+[**create_account_queue**](QueuesApi.md#create_account_queue) | **POST** /accounts/{account_id}/queues | Create a queue.
+[**delete_account_queue**](QueuesApi.md#delete_account_queue) | **DELETE** /accounts/{account_id}/queues/{queue_id} | Delete a queue.
+[**get_account_queue**](QueuesApi.md#get_account_queue) | **GET** /accounts/{account_id}/queues/{queue_id} | Show details of an individual queue.
+[**list_account_queues**](QueuesApi.md#list_account_queues) | **GET** /accounts/{account_id}/queues | Get a list of queues for an account.
+[**replace_account_queue**](QueuesApi.md#replace_account_queue) | **PUT** /accounts/{account_id}/queues/{queue_id} | Replace a queue.
 
 
 # **create_account_queue**
 > QueueFull create_account_queue(account_id, data=data)
 
-Create a queue
+Create a queue.
 
-For more on the input fields, see Account Queues.
+Create a queue. See Account Queues for more info on the properties.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -37,7 +37,7 @@ account_id = 56 # int | Account ID
 data = swagger_client.CreateQueueParams() # CreateQueueParams | Queue data (optional)
 
 try: 
-    # Create a queue
+    # Create a queue.
     api_response = api_instance.create_account_queue(account_id, data=data)
     pprint(api_response)
 except ApiException as e:
@@ -67,15 +67,15 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_account_queue**
-> DeleteQueue delete_account_queue(account_id, queue_id)
+> DeleteEntry delete_account_queue(account_id, queue_id)
 
-Delete a queue
+Delete a queue.
 
-This service a queue from the account. For more information on queue properties, see Account Queues.
+Delete a queue. See Account Queues for more info on the properties.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -92,7 +92,7 @@ account_id = 56 # int | Account ID
 queue_id = 56 # int | Queue ID
 
 try: 
-    # Delete a queue
+    # Delete a queue.
     api_response = api_instance.delete_account_queue(account_id, queue_id)
     pprint(api_response)
 except ApiException as e:
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeleteQueue**](DeleteQueue.md)
+[**DeleteEntry**](DeleteEntry.md)
 
 ### Authorization
 
@@ -124,13 +124,13 @@ Name | Type | Description  | Notes
 # **get_account_queue**
 > QueueFull get_account_queue(account_id, queue_id)
 
-Show details of an individual queue
+Show details of an individual queue.
 
-This service shows the details of an individual queue. For more on the input fields, see Account Queues.
+Show details of an individual queue. See Account Queues for more info on the properties.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -147,7 +147,7 @@ account_id = 56 # int | Account ID
 queue_id = 56 # int | Queue ID
 
 try: 
-    # Show details of an individual queue
+    # Show details of an individual queue.
     api_response = api_instance.get_account_queue(account_id, queue_id)
     pprint(api_response)
 except ApiException as e:
@@ -179,13 +179,13 @@ Name | Type | Description  | Notes
 # **list_account_queues**
 > ListQueues list_account_queues(account_id, filters_id=filters_id, filters_name=filters_name, sort_id=sort_id, sort_name=sort_name, limit=limit, offset=offset, fields=fields)
 
-Get a list of queues for an account
+Get a list of queues for an account.
 
-The List Queues service lists all the queues belong to the account. See Account Queues for more info on the properties.
+Get a list of queues for an account. See Account Queues for more info on the properties.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -208,7 +208,7 @@ offset = 56 # int | Results to skip (optional)
 fields = 'fields_example' # str | Field set (optional)
 
 try: 
-    # Get a list of queues for an account
+    # Get a list of queues for an account.
     api_response = api_instance.list_account_queues(account_id, filters_id=filters_id, filters_name=filters_name, sort_id=sort_id, sort_name=sort_name, limit=limit, offset=offset, fields=fields)
     pprint(api_response)
 except ApiException as e:
@@ -246,13 +246,13 @@ Name | Type | Description  | Notes
 # **replace_account_queue**
 > QueueFull replace_account_queue(account_id, queue_id, data=data)
 
-Replace a queue
+Replace a queue.
 
-The Replace Queue service replaces the parameters of a queue. For more on the input fields, see Account Queues.
+Replace a queue. See Account Queues for more info on the properties.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -270,7 +270,7 @@ queue_id = 56 # int | Queue ID
 data = swagger_client.CreateQueueParams() # CreateQueueParams | Queue data (optional)
 
 try: 
-    # Replace a queue
+    # Replace a queue.
     api_response = api_instance.replace_account_queue(account_id, queue_id, data=data)
     pprint(api_response)
 except ApiException as e:

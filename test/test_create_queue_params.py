@@ -35,7 +35,9 @@ class TestCreateQueueParams(unittest.TestCase):
         """
         Test CreateQueueParams
         """
-        model = swagger_client.models.create_queue_params.CreateQueueParams()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.create_queue_params.CreateQueueParams()
+        pass
 
 
 if __name__ == '__main__':

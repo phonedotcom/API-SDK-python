@@ -35,7 +35,7 @@ class TestContactsApi(unittest.TestCase):
         """
         Test case for create_account_extension_contact
 
-        Add a new address book contact for an extension
+        Add a new address book contact for an extension.
         """
         pass
 
@@ -43,7 +43,7 @@ class TestContactsApi(unittest.TestCase):
         """
         Test case for delete_account_extension_contact
 
-        
+        Delete a contact from the address book.
         """
         pass
 
@@ -51,7 +51,7 @@ class TestContactsApi(unittest.TestCase):
         """
         Test case for get_account_extension_contact
 
-        Retrieve the details of an address book contact
+        Retrieve the details of an address book contact.
         """
         pass
 
@@ -59,7 +59,7 @@ class TestContactsApi(unittest.TestCase):
         """
         Test case for list_account_extension_contacts
 
-        Show a list of address book contacts
+        Show the Caller ID options a given extension can use.
         """
         pass
 
@@ -67,7 +67,7 @@ class TestContactsApi(unittest.TestCase):
         """
         Test case for replace_account_extension_contact
 
-        
+        Update the info of a contact in the address book.
         """
         pass
 

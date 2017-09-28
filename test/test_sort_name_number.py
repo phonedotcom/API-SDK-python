@@ -35,7 +35,9 @@ class TestSortNameNumber(unittest.TestCase):
         """
         Test SortNameNumber
         """
-        model = swagger_client.models.sort_name_number.SortNameNumber()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.sort_name_number.SortNameNumber()
+        pass
 
 
 if __name__ == '__main__':

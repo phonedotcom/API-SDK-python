@@ -35,7 +35,9 @@ class TestCreateSubaccountParams(unittest.TestCase):
         """
         Test CreateSubaccountParams
         """
-        model = swagger_client.models.create_subaccount_params.CreateSubaccountParams()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.create_subaccount_params.CreateSubaccountParams()
+        pass
 
 
 if __name__ == '__main__':

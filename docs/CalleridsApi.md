@@ -4,19 +4,19 @@ All URIs are relative to *https://api.phone.com/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_caller_ids**](CalleridsApi.md#get_caller_ids) | **GET** /accounts/{account_id}/extensions/{extension_id}/caller-ids | Show the Caller ID options a given extension can use
+[**get_caller_ids**](CalleridsApi.md#get_caller_ids) | **GET** /accounts/{account_id}/extensions/{extension_id}/caller-ids | Show the Caller ID options a given extension can use.
 
 
 # **get_caller_ids**
 > ListCallerIds get_caller_ids(account_id, extension_id, filters_number=filters_number, filters_name=filters_name, sort_number=sort_number, sort_name=sort_name, limit=limit, offset=offset, fields=fields)
 
-Show the Caller ID options a given extension can use
+Show the Caller ID options a given extension can use.
 
-Get Caller ID
+Show the Caller ID options a given extension can use. See Intro to Caller IDs for more on the properties.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -40,7 +40,7 @@ offset = 56 # int | Results to skip (optional)
 fields = 'fields_example' # str | Field set (optional)
 
 try: 
-    # Show the Caller ID options a given extension can use
+    # Show the Caller ID options a given extension can use.
     api_response = api_instance.get_caller_ids(account_id, extension_id, filters_number=filters_number, filters_name=filters_name, sort_number=sort_number, sort_name=sort_name, limit=limit, offset=offset, fields=fields)
     pprint(api_response)
 except ApiException as e:

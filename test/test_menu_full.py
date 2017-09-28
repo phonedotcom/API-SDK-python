@@ -35,7 +35,9 @@ class TestMenuFull(unittest.TestCase):
         """
         Test MenuFull
         """
-        model = swagger_client.models.menu_full.MenuFull()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.menu_full.MenuFull()
+        pass
 
 
 if __name__ == '__main__':

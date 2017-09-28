@@ -35,7 +35,9 @@ class TestCreateDeviceParams(unittest.TestCase):
         """
         Test CreateDeviceParams
         """
-        model = swagger_client.models.create_device_params.CreateDeviceParams()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.create_device_params.CreateDeviceParams()
+        pass
 
 
 if __name__ == '__main__':

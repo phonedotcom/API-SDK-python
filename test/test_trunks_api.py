@@ -35,7 +35,7 @@ class TestTrunksApi(unittest.TestCase):
         """
         Test case for create_account_trunk
 
-        Add a trunk record with SIP information
+        Add a trunk record with SIP information.
         """
         pass
 
@@ -43,7 +43,7 @@ class TestTrunksApi(unittest.TestCase):
         """
         Test case for delete_account_trunk
 
-        Delete a trunk from account
+        Delete a trunk from account.
         """
         pass
 
@@ -51,7 +51,7 @@ class TestTrunksApi(unittest.TestCase):
         """
         Test case for get_account_trunk
 
-        Show details of an individual trunk
+        Show details of an individual trunk.
         """
         pass
 
@@ -59,7 +59,7 @@ class TestTrunksApi(unittest.TestCase):
         """
         Test case for list_account_trunks
 
-        Get a list of trunks for an account
+        Get a list of trunks for an account.
         """
         pass
 
@@ -67,7 +67,7 @@ class TestTrunksApi(unittest.TestCase):
         """
         Test case for replace_account_trunk
 
-        Replace parameters in a trunk
+        Replace parameters in a trunk.
         """
         pass
 

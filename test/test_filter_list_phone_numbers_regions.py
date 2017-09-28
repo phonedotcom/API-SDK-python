@@ -35,7 +35,9 @@ class TestFilterListPhoneNumbersRegions(unittest.TestCase):
         """
         Test FilterListPhoneNumbersRegions
         """
-        model = swagger_client.models.filter_list_phone_numbers_regions.FilterListPhoneNumbersRegions()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.filter_list_phone_numbers_regions.FilterListPhoneNumbersRegions()
+        pass
 
 
 if __name__ == '__main__':

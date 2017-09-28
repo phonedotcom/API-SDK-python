@@ -35,7 +35,9 @@ class TestCallFull(unittest.TestCase):
         """
         Test CallFull
         """
-        model = swagger_client.models.call_full.CallFull()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.call_full.CallFull()
+        pass
 
 
 if __name__ == '__main__':

@@ -43,7 +43,7 @@ class SubaccountsApi(object):
     def create_account_subaccount(self, account_id, data, **kwargs):
         """
         Add a subaccount for the authenticated user or client
-        This service shows the details of an individual Subaccount.
+        Add a subaccount for the authenticated user or client
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -55,7 +55,7 @@ class SubaccountsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param int account_id: Account ID (required)
-        :param CreateSubaccountParams data: SMS data (required)
+        :param CreateSubaccountParams data: Subaccount data (required)
         :return: AccountFull
                  If the method is called asynchronously,
                  returns the request thread.
@@ -70,7 +70,7 @@ class SubaccountsApi(object):
     def create_account_subaccount_with_http_info(self, account_id, data, **kwargs):
         """
         Add a subaccount for the authenticated user or client
-        This service shows the details of an individual Subaccount.
+        Add a subaccount for the authenticated user or client
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -82,7 +82,7 @@ class SubaccountsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param int account_id: Account ID (required)
-        :param CreateSubaccountParams data: SMS data (required)
+        :param CreateSubaccountParams data: Subaccount data (required)
         :return: AccountFull
                  If the method is called asynchronously,
                  returns the request thread.
@@ -113,12 +113,11 @@ class SubaccountsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/subaccounts'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -139,7 +138,7 @@ class SubaccountsApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api('/accounts/{account_id}/subaccounts', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -157,7 +156,7 @@ class SubaccountsApi(object):
     def list_account_subaccounts(self, account_id, **kwargs):
         """
         Get a list of subaccounts for the authenticated user or client
-        This service lists the Subaccount of the authenticated client. In most cases, there will not be any.
+        Get a list of subaccounts for the authenticated user or client
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -188,7 +187,7 @@ class SubaccountsApi(object):
     def list_account_subaccounts_with_http_info(self, account_id, **kwargs):
         """
         Get a list of subaccounts for the authenticated user or client
-        This service lists the Subaccount of the authenticated client. In most cases, there will not be any.
+        Get a list of subaccounts for the authenticated user or client
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -234,23 +233,22 @@ class SubaccountsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/subaccounts'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
 
-        query_params = {}
+        query_params = []
         if 'filters_id' in params:
-            query_params['filters[id]'] = params['filters_id']
+            query_params.append(('filters[id]', params['filters_id']))
             collection_formats['filters[id]'] = 'multi'
         if 'sort_id' in params:
-            query_params['sort[id]'] = params['sort_id']
+            query_params.append(('sort[id]', params['sort_id']))
         if 'limit' in params:
-            query_params['limit'] = params['limit']
+            query_params.append(('limit', params['limit']))
         if 'offset' in params:
-            query_params['offset'] = params['offset']
+            query_params.append(('offset', params['offset']))
         if 'fields' in params:
-            query_params['fields'] = params['fields']
+            query_params.append(('fields', params['fields']))
 
         header_params = {}
 
@@ -269,7 +267,7 @@ class SubaccountsApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/accounts/{account_id}/subaccounts', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

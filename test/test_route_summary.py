@@ -35,7 +35,9 @@ class TestRouteSummary(unittest.TestCase):
         """
         Test RouteSummary
         """
-        model = swagger_client.models.route_summary.RouteSummary()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.route_summary.RouteSummary()
+        pass
 
 
 if __name__ == '__main__':

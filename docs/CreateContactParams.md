@@ -15,9 +15,9 @@ Name | Type | Description | Notes
 **company** | **str** | Company Name | [optional] 
 **department** | **str** | Department Name | [optional] 
 **job_title** | **str** | Job Title | [optional] 
-**emails** | **list[object]** | Email Addresses | [optional] 
-**phone_numbers** | **list[object]** | Phone Numbers | [optional] 
-**addresses** | **list[object]** | Addresses | [optional] 
+**emails** | [**list[Email]**](Email.md) | Email Addresses | [optional] 
+**phone_numbers** | [**list[PhoneNumberContact]**](PhoneNumberContact.md) | Phone Numbers | [optional] 
+**addresses** | [**list[AddressListContacts]**](AddressListContacts.md) | Addresses | [optional] 
 **group** | **object** | Contact Group | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

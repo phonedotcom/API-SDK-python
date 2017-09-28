@@ -35,7 +35,9 @@ class TestRuleSet(unittest.TestCase):
         """
         Test RuleSet
         """
-        model = swagger_client.models.rule_set.RuleSet()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.rule_set.RuleSet()
+        pass
 
 
 if __name__ == '__main__':

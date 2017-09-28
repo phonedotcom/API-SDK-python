@@ -35,7 +35,9 @@ class TestCreateSmsParams(unittest.TestCase):
         """
         Test CreateSmsParams
         """
-        model = swagger_client.models.create_sms_params.CreateSmsParams()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.create_sms_params.CreateSmsParams()
+        pass
 
 
 if __name__ == '__main__':

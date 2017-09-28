@@ -35,7 +35,9 @@ class TestSmsFull(unittest.TestCase):
         """
         Test SmsFull
         """
-        model = swagger_client.models.sms_full.SmsFull()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.sms_full.SmsFull()
+        pass
 
 
 if __name__ == '__main__':

@@ -35,7 +35,9 @@ class TestCreateCallParams(unittest.TestCase):
         """
         Test CreateCallParams
         """
-        model = swagger_client.models.create_call_params.CreateCallParams()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.create_call_params.CreateCallParams()
+        pass
 
 
 if __name__ == '__main__':

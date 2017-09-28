@@ -35,7 +35,9 @@ class TestSortCallLogs(unittest.TestCase):
         """
         Test SortCallLogs
         """
-        model = swagger_client.models.sort_call_logs.SortCallLogs()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.sort_call_logs.SortCallLogs()
+        pass
 
 
 if __name__ == '__main__':

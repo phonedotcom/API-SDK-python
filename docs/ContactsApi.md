@@ -4,23 +4,23 @@ All URIs are relative to *https://api.phone.com/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_account_extension_contact**](ContactsApi.md#create_account_extension_contact) | **POST** /accounts/{account_id}/extensions/{extension_id}/contacts | Add a new address book contact for an extension
-[**delete_account_extension_contact**](ContactsApi.md#delete_account_extension_contact) | **DELETE** /accounts/{account_id}/extensions/{extension_id}/contacts/{contact_id} | 
-[**get_account_extension_contact**](ContactsApi.md#get_account_extension_contact) | **GET** /accounts/{account_id}/extensions/{extension_id}/contacts/{contact_id} | Retrieve the details of an address book contact
-[**list_account_extension_contacts**](ContactsApi.md#list_account_extension_contacts) | **GET** /accounts/{account_id}/extensions/{extension_id}/contacts | Show a list of address book contacts
-[**replace_account_extension_contact**](ContactsApi.md#replace_account_extension_contact) | **PUT** /accounts/{account_id}/extensions/{extension_id}/contacts/{contact_id} | 
+[**create_account_extension_contact**](ContactsApi.md#create_account_extension_contact) | **POST** /accounts/{account_id}/extensions/{extension_id}/contacts | Add a new address book contact for an extension.
+[**delete_account_extension_contact**](ContactsApi.md#delete_account_extension_contact) | **DELETE** /accounts/{account_id}/extensions/{extension_id}/contacts/{contact_id} | Delete a contact from the address book.
+[**get_account_extension_contact**](ContactsApi.md#get_account_extension_contact) | **GET** /accounts/{account_id}/extensions/{extension_id}/contacts/{contact_id} | Retrieve the details of an address book contact.
+[**list_account_extension_contacts**](ContactsApi.md#list_account_extension_contacts) | **GET** /accounts/{account_id}/extensions/{extension_id}/contacts | Show the Caller ID options a given extension can use.
+[**replace_account_extension_contact**](ContactsApi.md#replace_account_extension_contact) | **PUT** /accounts/{account_id}/extensions/{extension_id}/contacts/{contact_id} | Update the info of a contact in the address book.
 
 
 # **create_account_extension_contact**
 > ContactFull create_account_extension_contact(account_id, extension_id, data=data)
 
-Add a new address book contact for an extension
+Add a new address book contact for an extension.
 
-For more on the input fields, see Account Contacts.
+Add a new address book contact for an extension. See Account Contacts for more info on the fields in each item.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -38,7 +38,7 @@ extension_id = 56 # int | Extension ID
 data = swagger_client.CreateContactParams() # CreateContactParams | Contact data (optional)
 
 try: 
-    # Add a new address book contact for an extension
+    # Add a new address book contact for an extension.
     api_response = api_instance.create_account_extension_contact(account_id, extension_id, data=data)
     pprint(api_response)
 except ApiException as e:
@@ -69,15 +69,15 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_account_extension_contact**
-> DeleteContact delete_account_extension_contact(account_id, extension_id, contact_id)
+> DeleteEntry delete_account_extension_contact(account_id, extension_id, contact_id)
 
+Delete a contact from the address book.
 
-
-
+Delete a contact from the address book. See Account Contacts for more info on the fields in each item.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -95,7 +95,7 @@ extension_id = 56 # int | Extension ID
 contact_id = 56 # int | Contact ID
 
 try: 
-    # 
+    # Delete a contact from the address book.
     api_response = api_instance.delete_account_extension_contact(account_id, extension_id, contact_id)
     pprint(api_response)
 except ApiException as e:
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeleteContact**](DeleteContact.md)
+[**DeleteEntry**](DeleteEntry.md)
 
 ### Authorization
 
@@ -128,13 +128,13 @@ Name | Type | Description  | Notes
 # **get_account_extension_contact**
 > ContactFull get_account_extension_contact(account_id, extension_id, contact_id)
 
-Retrieve the details of an address book contact
+Retrieve the details of an address book contact.
 
-For more info on the fields shown, see Account Contacts.
+Retrieve the details of an address book contact. See Account Contacts for more info on the fields in each item.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -152,7 +152,7 @@ extension_id = 56 # int | Extension ID
 contact_id = 56 # int | Contact ID
 
 try: 
-    # Retrieve the details of an address book contact
+    # Retrieve the details of an address book contact.
     api_response = api_instance.get_account_extension_contact(account_id, extension_id, contact_id)
     pprint(api_response)
 except ApiException as e:
@@ -185,13 +185,13 @@ Name | Type | Description  | Notes
 # **list_account_extension_contacts**
 > ListContacts list_account_extension_contacts(account_id, extension_id, filters_id=filters_id, filters_group_id=filters_group_id, filters_updated_at=filters_updated_at, sort_id=sort_id, sort_updated_at=sort_updated_at, limit=limit, offset=offset, fields=fields)
 
-Show a list of address book contacts
+Show the Caller ID options a given extension can use.
 
-See Account Contacts for more info on the fields in each item.
+Show the Caller ID options a given extension can use. See Intro to Caller IDs for more on the properties.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -216,7 +216,7 @@ offset = 56 # int | Results to skip (optional)
 fields = 'fields_example' # str | Field set (optional)
 
 try: 
-    # Show a list of address book contacts
+    # Show the Caller ID options a given extension can use.
     api_response = api_instance.list_account_extension_contacts(account_id, extension_id, filters_id=filters_id, filters_group_id=filters_group_id, filters_updated_at=filters_updated_at, sort_id=sort_id, sort_updated_at=sort_updated_at, limit=limit, offset=offset, fields=fields)
     pprint(api_response)
 except ApiException as e:
@@ -256,13 +256,13 @@ Name | Type | Description  | Notes
 # **replace_account_extension_contact**
 > ContactFull replace_account_extension_contact(account_id, extension_id, contact_id, data=data)
 
+Update the info of a contact in the address book.
 
-
-For more on the input fields, see Account Contacts.
+Update the info of a contact in the address book. See Account Contacts for more info on the fields in each item.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -281,7 +281,7 @@ contact_id = 56 # int | Contact ID
 data = swagger_client.CreateContactParams() # CreateContactParams | Contact data (optional)
 
 try: 
-    # 
+    # Update the info of a contact in the address book.
     api_response = api_instance.replace_account_extension_contact(account_id, extension_id, contact_id, data=data)
     pprint(api_response)
 except ApiException as e:

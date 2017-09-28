@@ -35,7 +35,9 @@ class TestListSchedules(unittest.TestCase):
         """
         Test ListSchedules
         """
-        model = swagger_client.models.list_schedules.ListSchedules()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.list_schedules.ListSchedules()
+        pass
 
 
 if __name__ == '__main__':

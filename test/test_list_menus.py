@@ -35,7 +35,9 @@ class TestListMenus(unittest.TestCase):
         """
         Test ListMenus
         """
-        model = swagger_client.models.list_menus.ListMenus()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.list_menus.ListMenus()
+        pass
 
 
 if __name__ == '__main__':

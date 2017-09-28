@@ -112,12 +112,11 @@ class MediaApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/media/files'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -140,7 +139,7 @@ class MediaApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api('/accounts/{account_id}/media/files', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -225,12 +224,11 @@ class MediaApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/media/tts'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -251,7 +249,7 @@ class MediaApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api('/accounts/{account_id}/media/tts', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -282,7 +280,7 @@ class MediaApi(object):
             for asynchronous request. (optional)
         :param int account_id: Account ID (required)
         :param int media_id: Media ID (required)
-        :return: DeleteMedia
+        :return: DeleteEntry
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -309,7 +307,7 @@ class MediaApi(object):
             for asynchronous request. (optional)
         :param int account_id: Account ID (required)
         :param int media_id: Media ID (required)
-        :return: DeleteMedia
+        :return: DeleteEntry
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -339,14 +337,13 @@ class MediaApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/media/{media_id}'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
         if 'media_id' in params:
             path_params['media_id'] = params['media_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -365,14 +362,14 @@ class MediaApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'DELETE',
+        return self.api_client.call_api('/accounts/{account_id}/media/{media_id}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='DeleteMedia',
+                                        response_type='DeleteEntry',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -453,14 +450,13 @@ class MediaApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/media/{media_id}'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
         if 'media_id' in params:
             path_params['media_id'] = params['media_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -479,7 +475,7 @@ class MediaApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/accounts/{account_id}/media/{media_id}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -496,8 +492,8 @@ class MediaApi(object):
 
     def list_account_media(self, account_id, **kwargs):
         """
-        Get a list of media recordings for an account
-        See Account Menus for more info on the properties.
+        Get a list of media recordings for an account.
+        Get a list of media recordings for an account. See Account Media for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level List Media API with the following definition: GET https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/media
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -529,8 +525,8 @@ class MediaApi(object):
 
     def list_account_media_with_http_info(self, account_id, **kwargs):
         """
-        Get a list of media recordings for an account
-        See Account Menus for more info on the properties.
+        Get a list of media recordings for an account.
+        Get a list of media recordings for an account. See Account Media for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level List Media API with the following definition: GET https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/media
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -580,28 +576,27 @@ class MediaApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/media'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
 
-        query_params = {}
+        query_params = []
         if 'filters_id' in params:
-            query_params['filters[id]'] = params['filters_id']
+            query_params.append(('filters[id]', params['filters_id']))
             collection_formats['filters[id]'] = 'multi'
         if 'filters_name' in params:
-            query_params['filters[name]'] = params['filters_name']
+            query_params.append(('filters[name]', params['filters_name']))
             collection_formats['filters[name]'] = 'multi'
         if 'sort_id' in params:
-            query_params['sort[id]'] = params['sort_id']
+            query_params.append(('sort[id]', params['sort_id']))
         if 'sort_name' in params:
-            query_params['sort[name]'] = params['sort_name']
+            query_params.append(('sort[name]', params['sort_name']))
         if 'limit' in params:
-            query_params['limit'] = params['limit']
+            query_params.append(('limit', params['limit']))
         if 'offset' in params:
-            query_params['offset'] = params['offset']
+            query_params.append(('offset', params['offset']))
         if 'fields' in params:
-            query_params['fields'] = params['fields']
+            query_params.append(('fields', params['fields']))
 
         header_params = {}
 
@@ -620,7 +615,7 @@ class MediaApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/accounts/{account_id}/media', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -712,14 +707,13 @@ class MediaApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/media/files/{media_id}'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
         if 'media_id' in params:
             path_params['media_id'] = params['media_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -737,12 +731,12 @@ class MediaApi(object):
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json'])
+            select_header_content_type(['multipart/form-data'])
 
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'PUT',
+        return self.api_client.call_api('/accounts/{account_id}/media/files/{media_id}', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -759,8 +753,8 @@ class MediaApi(object):
 
     def replace_account_media_tts(self, account_id, media_id, **kwargs):
         """
-        Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
-        See Account Media for more info on the properties.
+        Update a media object to your account.
+        Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB. See Account Media for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Replace Media API with the following definition: PUT https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/media/:media_id
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -787,8 +781,8 @@ class MediaApi(object):
 
     def replace_account_media_tts_with_http_info(self, account_id, media_id, **kwargs):
         """
-        Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
-        See Account Media for more info on the properties.
+        Update a media object to your account.
+        Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB. See Account Media for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Replace Media API with the following definition: PUT https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/media/:media_id
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -832,14 +826,13 @@ class MediaApi(object):
 
         collection_formats = {}
 
-        resource_path = '/accounts/{account_id}/media/tts/{media_id}'.replace('{format}', 'json')
         path_params = {}
         if 'account_id' in params:
             path_params['account_id'] = params['account_id']
         if 'media_id' in params:
             path_params['media_id'] = params['media_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -860,7 +853,7 @@ class MediaApi(object):
         # Authentication setting
         auth_settings = ['apiKey']
 
-        return self.api_client.call_api(resource_path, 'PUT',
+        return self.api_client.call_api('/accounts/{account_id}/media/tts/{media_id}', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,

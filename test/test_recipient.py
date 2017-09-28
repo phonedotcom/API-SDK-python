@@ -35,7 +35,9 @@ class TestRecipient(unittest.TestCase):
         """
         Test Recipient
         """
-        model = swagger_client.models.recipient.Recipient()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.recipient.Recipient()
+        pass
 
 
 if __name__ == '__main__':

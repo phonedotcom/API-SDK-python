@@ -35,7 +35,9 @@ class TestContactSummary(unittest.TestCase):
         """
         Test ContactSummary
         """
-        model = swagger_client.models.contact_summary.ContactSummary()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.contact_summary.ContactSummary()
+        pass
 
 
 if __name__ == '__main__':

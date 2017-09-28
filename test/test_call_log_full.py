@@ -35,7 +35,9 @@ class TestCallLogFull(unittest.TestCase):
         """
         Test CallLogFull
         """
-        model = swagger_client.models.call_log_full.CallLogFull()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.call_log_full.CallLogFull()
+        pass
 
 
 if __name__ == '__main__':

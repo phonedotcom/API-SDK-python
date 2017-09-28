@@ -35,7 +35,9 @@ class TestGreeting(unittest.TestCase):
         """
         Test Greeting
         """
-        model = swagger_client.models.greeting.Greeting()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.greeting.Greeting()
+        pass
 
 
 if __name__ == '__main__':

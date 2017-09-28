@@ -35,7 +35,9 @@ class TestDeviceMembership(unittest.TestCase):
         """
         Test DeviceMembership
         """
-        model = swagger_client.models.device_membership.DeviceMembership()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.device_membership.DeviceMembership()
+        pass
 
 
 if __name__ == '__main__':

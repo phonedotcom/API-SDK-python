@@ -35,7 +35,9 @@ class TestAvailableNumbersFull(unittest.TestCase):
         """
         Test AvailableNumbersFull
         """
-        model = swagger_client.models.available_numbers_full.AvailableNumbersFull()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.available_numbers_full.AvailableNumbersFull()
+        pass
 
 
 if __name__ == '__main__':

@@ -35,7 +35,9 @@ class TestCreateContactParams(unittest.TestCase):
         """
         Test CreateContactParams
         """
-        model = swagger_client.models.create_contact_params.CreateContactParams()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.create_contact_params.CreateContactParams()
+        pass
 
 
 if __name__ == '__main__':

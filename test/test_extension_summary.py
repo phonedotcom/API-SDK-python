@@ -35,7 +35,9 @@ class TestExtensionSummary(unittest.TestCase):
         """
         Test ExtensionSummary
         """
-        model = swagger_client.models.extension_summary.ExtensionSummary()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.extension_summary.ExtensionSummary()
+        pass
 
 
 if __name__ == '__main__':

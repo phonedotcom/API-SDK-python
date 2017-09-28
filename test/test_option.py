@@ -35,7 +35,9 @@ class TestOption(unittest.TestCase):
         """
         Test Option
         """
-        model = swagger_client.models.option.Option()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.option.Option()
+        pass
 
 
 if __name__ == '__main__':

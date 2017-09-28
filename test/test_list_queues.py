@@ -35,7 +35,9 @@ class TestListQueues(unittest.TestCase):
         """
         Test ListQueues
         """
-        model = swagger_client.models.list_queues.ListQueues()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.list_queues.ListQueues()
+        pass
 
 
 if __name__ == '__main__':

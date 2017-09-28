@@ -35,7 +35,9 @@ class TestLine(unittest.TestCase):
         """
         Test Line
         """
-        model = swagger_client.models.line.Line()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.line.Line()
+        pass
 
 
 if __name__ == '__main__':

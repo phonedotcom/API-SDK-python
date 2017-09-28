@@ -35,7 +35,9 @@ class TestPhoneNumberFull(unittest.TestCase):
         """
         Test PhoneNumberFull
         """
-        model = swagger_client.models.phone_number_full.PhoneNumberFull()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.phone_number_full.PhoneNumberFull()
+        pass
 
 
 if __name__ == '__main__':

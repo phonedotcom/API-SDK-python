@@ -35,7 +35,7 @@ class TestCalleridsApi(unittest.TestCase):
         """
         Test case for get_caller_ids
 
-        Show the Caller ID options a given extension can use
+        Show the Caller ID options a given extension can use.
         """
         pass
 

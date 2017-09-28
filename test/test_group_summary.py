@@ -35,7 +35,9 @@ class TestGroupSummary(unittest.TestCase):
         """
         Test GroupSummary
         """
-        model = swagger_client.models.group_summary.GroupSummary()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.group_summary.GroupSummary()
+        pass
 
 
 if __name__ == '__main__':

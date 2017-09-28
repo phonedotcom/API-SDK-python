@@ -35,7 +35,9 @@ class TestSipAuthentication(unittest.TestCase):
         """
         Test SipAuthentication
         """
-        model = swagger_client.models.sip_authentication.SipAuthentication()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.sip_authentication.SipAuthentication()
+        pass
 
 
 if __name__ == '__main__':

@@ -35,7 +35,9 @@ class TestAccountSummary(unittest.TestCase):
         """
         Test AccountSummary
         """
-        model = swagger_client.models.account_summary.AccountSummary()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.account_summary.AccountSummary()
+        pass
 
 
 if __name__ == '__main__':

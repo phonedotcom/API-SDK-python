@@ -4,22 +4,22 @@ All URIs are relative to *https://api.phone.com/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_account_extension**](ExtensionsApi.md#create_account_extension) | **POST** /accounts/{account_id}/extensions | Create an individual extension
-[**get_account_extension**](ExtensionsApi.md#get_account_extension) | **GET** /accounts/{account_id}/extensions/{extension_id} | Show details of an individual extension
-[**list_account_extensions**](ExtensionsApi.md#list_account_extensions) | **GET** /accounts/{account_id}/extensions | Get a list of extensions visible to the authenticated user or client
-[**replace_account_extension**](ExtensionsApi.md#replace_account_extension) | **PUT** /accounts/{account_id}/extensions/{extension_id} | Replace an individual extension
+[**create_account_extension**](ExtensionsApi.md#create_account_extension) | **POST** /accounts/{account_id}/extensions | Create an individual extension.
+[**get_account_extension**](ExtensionsApi.md#get_account_extension) | **GET** /accounts/{account_id}/extensions/{extension_id} | Show details of an individual extension.
+[**list_account_extensions**](ExtensionsApi.md#list_account_extensions) | **GET** /accounts/{account_id}/extensions | Get a list of extensions visible to the authenticated user or client.
+[**replace_account_extension**](ExtensionsApi.md#replace_account_extension) | **PUT** /accounts/{account_id}/extensions/{extension_id} | Replace an individual extension.
 
 
 # **create_account_extension**
 > ExtensionFull create_account_extension(account_id, data=data)
 
-Create an individual extension
+Create an individual extension.
 
-This service shows how to create a virtual extension.
+Create an individual extension. See extension for more details.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -36,7 +36,7 @@ account_id = 56 # int | Account ID
 data = swagger_client.CreateExtensionParams() # CreateExtensionParams | Account Extensions Data (optional)
 
 try: 
-    # Create an individual extension
+    # Create an individual extension.
     api_response = api_instance.create_account_extension(account_id, data=data)
     pprint(api_response)
 except ApiException as e:
@@ -68,13 +68,13 @@ Name | Type | Description  | Notes
 # **get_account_extension**
 > ExtensionFull get_account_extension(account_id, extension_id)
 
-Show details of an individual extension
+Show details of an individual extension.
 
-This service shows the details of an individual Extension.
+Show details of an individual extension. See extension for more details.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -91,7 +91,7 @@ account_id = 56 # int | Account ID
 extension_id = 56 # int | Extension ID
 
 try: 
-    # Show details of an individual extension
+    # Show details of an individual extension.
     api_response = api_instance.get_account_extension(account_id, extension_id)
     pprint(api_response)
 except ApiException as e:
@@ -123,13 +123,13 @@ Name | Type | Description  | Notes
 # **list_account_extensions**
 > ListExtensions list_account_extensions(account_id, filters_id=filters_id, filters_extension=filters_extension, filters_name=filters_name, sort_id=sort_id, sort_extension=sort_extension, sort_name=sort_name, limit=limit, offset=offset, fields=fields)
 
-Get a list of extensions visible to the authenticated user or client
+Get a list of extensions visible to the authenticated user or client.
 
-This service lists the visible extensions on a given account.
+Get a list of extensions visible to the authenticated user or client. See extension for more details.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -154,7 +154,7 @@ offset = 56 # int | Results to skip (optional)
 fields = 'fields_example' # str | Field set (optional)
 
 try: 
-    # Get a list of extensions visible to the authenticated user or client
+    # Get a list of extensions visible to the authenticated user or client.
     api_response = api_instance.list_account_extensions(account_id, filters_id=filters_id, filters_extension=filters_extension, filters_name=filters_name, sort_id=sort_id, sort_extension=sort_extension, sort_name=sort_name, limit=limit, offset=offset, fields=fields)
     pprint(api_response)
 except ApiException as e:
@@ -194,13 +194,13 @@ Name | Type | Description  | Notes
 # **replace_account_extension**
 > ExtensionFull replace_account_extension(account_id, extension_id, data=data)
 
-Replace an individual extension
+Replace an individual extension.
 
-This service shows how to update an individual extension.
+Replace an individual extension. See extension for more details.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -218,7 +218,7 @@ extension_id = 56 # int | Extension ID
 data = swagger_client.ReplaceExtensionParams() # ReplaceExtensionParams | Account Extensions Data (optional)
 
 try: 
-    # Replace an individual extension
+    # Replace an individual extension.
     api_response = api_instance.replace_account_extension(account_id, extension_id, data=data)
     pprint(api_response)
 except ApiException as e:

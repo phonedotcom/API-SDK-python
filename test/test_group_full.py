@@ -35,7 +35,9 @@ class TestGroupFull(unittest.TestCase):
         """
         Test GroupFull
         """
-        model = swagger_client.models.group_full.GroupFull()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.group_full.GroupFull()
+        pass
 
 
 if __name__ == '__main__':

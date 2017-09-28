@@ -35,7 +35,9 @@ class TestCreateGroupParams(unittest.TestCase):
         """
         Test CreateGroupParams
         """
-        model = swagger_client.models.create_group_params.CreateGroupParams()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.create_group_params.CreateGroupParams()
+        pass
 
 
 if __name__ == '__main__':
